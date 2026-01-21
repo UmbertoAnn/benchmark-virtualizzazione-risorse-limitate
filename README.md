@@ -43,7 +43,7 @@ Il repository è organizzato come segue:
 - │ ├── fio_seq64k_bare_.txt
 - │ └── ...
 - │
-- ├── RESULTS_LATO_SERVER_VM_direct1_nocache_fio64k/	(contiene i risultati fio64k eseguiti in modalità Direct I/O, ossia senza uso della cache)
+- ├── RESULTS_LATO_SERVER_VM_direct1_nocache_fio64k/ --- (contiene i risultati fio64k eseguiti in modalità Direct I/O, ossia senza uso della cache)
 - │ ├── fio_seq64k_bare_.txt
 - │ └── ...
 - │
@@ -75,12 +75,12 @@ Per i **benchmark sintetici lato server** (CPU, memoria, I/O su disco) sono stat
 ### Misurazione capacità del sottosistema di rete (effettuato dal client)
 - **iperf3** – caratterizzazione del sottosistema di rete
 
-### Benchmark lato server
+### Benchmark effettuati lato server
 - **sysbench** – valutazione delle prestazioni CPU e memoria
 - **fio** – analisi delle prestazioni del sottosistema di I/O su storage
 - **stress-ng** – test qualitativi di stabilità del sistema sotto carico misto
 
-### Benchmark lato client
+### Benchmark effettuati dal client
 - **wrk** – benchmarking HTTP del web server Nginx
 - **pgbench** – valutazione delle prestazioni del database PostgreSQL
 - **memtier_benchmark** – benchmarking del database Redis
@@ -104,6 +104,8 @@ Dove:
 - `<workload>` identifica il tipo di benchmark eseguito,
 - `<ambiente>` indica l’ambiente di esecuzione,
 - `<YYYYMMDD-HHMM>` rappresenta la data e l’orario di esecuzione.
+
+NOTA: nelle cartelle RESULTS_VM, RESULTS_LATO_SERVER_VM, RESULTS_LATO_SERVER_VM_direct1_nocache_fio64k i file testuali che riportano nel nome l'ambiente "bare" contengono i risultati ottenuti su macchina virtuale.
 
 Ogni benchmark è stato eseguito **sette volte**; i risultati riportati nella tesi rappresentano la **media aritmetica di tutte le esecuzioni**.
 
