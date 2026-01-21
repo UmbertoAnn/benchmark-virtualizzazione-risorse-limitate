@@ -2,7 +2,7 @@
 
 ## Panoramica
 
-Questo repository contiene gli **artefatti sperimentali e i risultati dei benchmark** prodotti nell’ambito di una tesi di laurea magistrale dedicata alla **valutazione delle prestazioni di ambienti bare metal, virtualizzati e containerizzati** su **hardware caratterizzato da risorse limitate**.
+Questo repository contiene gli **artefatti sperimentali e i risultati dei benchmark** prodotti nell’ambito di una tesi di Laurea Magistrale in Informatica incentrata sulla **Analisi comparativa di prestazioni tra ambienti bare-metal, containerizzati e virtualizzati su risorse hardware limitate**.
 
 L’obiettivo dell’attività sperimentale è analizzare l’overhead introdotto da:
 - virtualizzazione hardware (macchine virtuali),
@@ -22,11 +22,15 @@ Il repository è organizzato come segue:
 - ├── RESULTS_BARE/
 - │ ├── http_1kb_bare_YYYYMMDD-HHMM.txt
 - │ ├── redis_bare_YYYYMMDD-HHMM.txt
+- │ ├── http_1kb_docker_YYYYMMDD-HHMM.txt
+- │ ├── redis_docker_YYYYMMDD-HHMM.txt
 - │ └── ...
 - │
 - ├── RESULTS_VM/
-- │ ├── http_1kb_vm_YYYYMMDD-HHMM.txt
-- │ ├── postgres_vm_YYYYMMDD-HHMM.txt
+- │ ├── http_1kb_bare_YYYYMMDD-HHMM.txt
+- │ ├── postgres_bare_YYYYMMDD-HHMM.txt
+- │ ├── http_1kb_docker_YYYYMMDD-HHMM.txt
+- │ ├── postgres_docker_YYYYMMDD-HHMM.txt
 - │ └── ...
 - │
 - ├── RESULTS_LATO_SERVER_BARE/
@@ -35,8 +39,12 @@ Il repository è organizzato come segue:
 - │ └── ...
 - │
 - ├── RESULTS_LATO_SERVER_VM/
-- │ ├── sysbench_cpu_vm_.txt
-- │ ├── fio_seq64k_vm_.txt
+- │ ├── sysbench_cpu_bare_.txt
+- │ ├── fio_seq64k_bare_.txt
+- │ └── ...
+- │
+- ├── RESULTS_LATO_SERVER_VM_direct1_nocache_fio64k/	(contiene i risultati fio64k eseguiti in modalità Direct I/O, ossia senza uso della cache)
+- │ ├── fio_seq64k_bare_.txt
 - │ └── ...
 - │
 - ├── scripts/
@@ -58,17 +66,19 @@ Gli esperimenti sono stati condotti nei seguenti ambienti di esecuzione:
 - **Macchina virtuale (KVM)**
 - **Docker su macchina virtuale**
 
-Per i **benchmark sintetici lato server** (CPU, memoria e rete) sono state considerate esclusivamente le configurazioni **bare metal** e **macchina virtuale**, in quanto i container condividono il kernel del sistema host e non introducono un ambiente di esecuzione kernel-level distinto.
+Per i **benchmark sintetici lato server** (CPU, memoria, I/O su disco) sono state considerate esclusivamente le configurazioni **bare metal** e **macchina virtuale**, in quanto i container condividono il kernel del sistema host e non introducono un ambiente di esecuzione kernel-level distinto.
 
 ---
 
 ## Benchmark utilizzati
 
+### Misurazione capacità del sottosistema di rete (effettuato dal client)
+- **iperf3** – caratterizzazione del sottosistema di rete
+
 ### Benchmark lato server
 - **sysbench** – valutazione delle prestazioni CPU e memoria
 - **fio** – analisi delle prestazioni del sottosistema di I/O su storage
 - **stress-ng** – test qualitativi di stabilità del sistema sotto carico misto
-- **iperf3** – caratterizzazione del sottosistema di rete
 
 ### Benchmark lato client
 - **wrk** – benchmarking HTTP del web server Nginx
@@ -115,7 +125,7 @@ Questo repository è reso disponibile al fine di:
 
 Il presente repository accompagna la tesi di laurea magistrale:
 
-> **Valutazione delle prestazioni di virtualizzazione e containerizzazione su sistemi a risorse limitate**
+> **Analisi comparativa di prestazioni tra ambienti bare-metal, containerizzati e virtualizzati su risorse hardware limitate**
 
 Il repository contiene esclusivamente **materiale sperimentale** (script e output dei benchmark).  
 L’analisi dei dati, la loro aggregazione e l’interpretazione dei risultati sono discusse all’interno del documento di tesi.
