@@ -1,0 +1,58 @@
+# ===== Makefile.server =====
+# Uso:
+#   make -f Makefile.server fio_rr4k_bare
+# Variabili utili (override): REPS, SLEEP, IOFILE, FIO_SIZE, FIO_QD, FIO_NJ, SB_THREADS, SB_TIME
+
+SHELL := /bin/bash
+
+# ---- default ----
+REPS       ?= 7
+SLEEP      ?= 90
+IOFILE     ?= /srv/bench/io/testfile
+FIO_SIZE   ?= 2G
+FIO_QD     ?= 32
+FIO_NJ     ?= 4
+SB_THREADS ?= 2
+SB_TIME    ?= 60
+STRESS_TIME?= 120
+RESULTS_DIR ?= RESULTS
+
+# esporta in ambiente per lo script
+export REPS
+export SLEEP_SECS := $(SLEEP)
+export RESULTS_DIR := $(RESULTS_DIR)
+
+
+.PHONY: help
+help:
+        @echo "Makefile.server targets:"
+        @echo "  fio_rr4k_bare      fio_seq64k_bare"
+        @echo "  sb_cpu_bare        sb_mem_bare"
+        @echo "  stress_mix_bare"
+        @echo ""
+        @echo "Override: IOFILE=$(IOFILE) FIO_SIZE=$(FIO_SIZE) FIO_QD=$(FIO_QD) FIO_NJ=$(FIO_NJ) SB_THREADS=$(SB_THREADS) SB_TIME=$(SB_TIME)"
+
+# ---------- FIO (I/O disco) ----------
+.PHONY: fio_rr4k_bare
+fio_rr4k_bare:
+        @sync; echo 3 | sudo tee /proc/sys/vm/drop_caches >/dev/null
+        ./run_bench.sh -w fio_rr4k -e bare fio --file $(IOFILE) --rw randread --bs 4k --iodepth $(FIO_QD) --numjobs $(FIO_NJ) --size $(FIO_SIZE) --time 60
+
+.PHONY: fio_seq64k_bare
+fio_seq64k_bare:
+        @sync; echo 3 | sudo tee /proc/sys/vm/drop_caches >/dev/null
+        ./run_bench.sh -w fio_seq64k -e bare fio --file $(IOFILE) --rw read --bs 64k --iodepth $(FIO_QD) --numjobs $(FIO_NJ) --size $(FIO_SIZE) --time 60
+
+# ---------- Sysbench (CPU/MEM) ----------
+.PHONY: sb_cpu_bare
+sb_cpu_bare:
+        ./run_bench.sh -w sb_cpu -e bare sysbench --cpu --threads $(SB_THREADS) --time $(SB_TIME)
+
+.PHONY: sb_mem_bare
+sb_mem_bare:
+        ./run_bench.sh -w sb_mem -e bare sysbench --memory --block 1M --total 10G
+
+# ---------- Stress-ng ----------
+.PHONY: stress_mix_bare
+stress_mix_bare:
+        ./run_bench.sh -w stress_mix -e bare stressng --cpu 4 --vm 2 --vm-bytes 1G --io 2 --timeout $(STRESS_TIME)

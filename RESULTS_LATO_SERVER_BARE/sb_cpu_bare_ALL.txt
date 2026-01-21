@@ -1,0 +1,238 @@
+=== 2025-11-09 16:47:24 — workload=sb_cpu env=bare run=1/7 ===
+$ sysbench cpu --threads=2 --time=60 run
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 2
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  2740.04
+
+General statistics:
+    total time:                          60.0006s
+    total number of events:              164410
+
+Latency (ms):
+         min:                                    0.72
+         avg:                                    0.73
+         max:                                    5.72
+         95th percentile:                        0.73
+         sum:                               119930.50
+
+Threads fairness:
+    events (avg/stddev):           82205.0000/23.00
+    execution time (avg/stddev):   59.9653/0.00
+
+=== end ===
+=== 2025-11-09 16:49:54 — workload=sb_cpu env=bare run=2/7 ===
+$ sysbench cpu --threads=2 --time=60 run
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 2
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  2740.17
+
+General statistics:
+    total time:                          60.0007s
+    total number of events:              164418
+
+Latency (ms):
+         min:                                    0.72
+         avg:                                    0.73
+         max:                                    4.75
+         95th percentile:                        0.73
+         sum:                               119932.38
+
+Threads fairness:
+    events (avg/stddev):           82209.0000/45.00
+    execution time (avg/stddev):   59.9662/0.00
+
+=== end ===
+=== 2025-11-09 16:52:24 — workload=sb_cpu env=bare run=3/7 ===
+$ sysbench cpu --threads=2 --time=60 run
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 2
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  2740.68
+
+General statistics:
+    total time:                          60.0004s
+    total number of events:              164448
+
+Latency (ms):
+         min:                                    0.72
+         avg:                                    0.73
+         max:                                    5.76
+         95th percentile:                        0.73
+         sum:                               119930.26
+
+Threads fairness:
+    events (avg/stddev):           82224.0000/38.00
+    execution time (avg/stddev):   59.9651/0.00
+
+=== end ===
+=== 2025-11-09 16:54:54 — workload=sb_cpu env=bare run=4/7 ===
+$ sysbench cpu --threads=2 --time=60 run
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 2
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  2740.20
+
+General statistics:
+    total time:                          60.0007s
+    total number of events:              164420
+
+Latency (ms):
+         min:                                    0.72
+         avg:                                    0.73
+         max:                                    4.75
+         95th percentile:                        0.73
+         sum:                               119933.15
+
+Threads fairness:
+    events (avg/stddev):           82210.0000/30.00
+    execution time (avg/stddev):   59.9666/0.00
+
+=== end ===
+=== 2025-11-09 16:57:24 — workload=sb_cpu env=bare run=5/7 ===
+$ sysbench cpu --threads=2 --time=60 run
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 2
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  2740.48
+
+General statistics:
+    total time:                          60.0007s
+    total number of events:              164437
+
+Latency (ms):
+         min:                                    0.72
+         avg:                                    0.73
+         max:                                    6.75
+         95th percentile:                        0.73
+         sum:                               119931.96
+
+Threads fairness:
+    events (avg/stddev):           82218.5000/1.50
+    execution time (avg/stddev):   59.9660/0.00
+
+=== end ===
+=== 2025-11-09 16:59:54 — workload=sb_cpu env=bare run=6/7 ===
+$ sysbench cpu --threads=2 --time=60 run
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 2
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  2740.97
+
+General statistics:
+    total time:                          60.0005s
+    total number of events:              164466
+
+Latency (ms):
+         min:                                    0.72
+         avg:                                    0.73
+         max:                                    4.75
+         95th percentile:                        0.73
+         sum:                               119930.87
+
+Threads fairness:
+    events (avg/stddev):           82233.0000/30.00
+    execution time (avg/stddev):   59.9654/0.00
+
+=== end ===
+=== 2025-11-09 17:02:24 — workload=sb_cpu env=bare run=7/7 ===
+$ sysbench cpu --threads=2 --time=60 run
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 2
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  2740.68
+
+General statistics:
+    total time:                          60.0008s
+    total number of events:              164449
+
+Latency (ms):
+         min:                                    0.72
+         avg:                                    0.73
+         max:                                    5.74
+         95th percentile:                        0.73
+         sum:                               119932.10
+
+Threads fairness:
+    events (avg/stddev):           82224.5000/6.50
+    execution time (avg/stddev):   59.9661/0.00
+
+=== end ===

@@ -1,0 +1,84 @@
+=== 2025-11-09 18:15:14 — workload=http_100kb env=bare run=1/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.60/100kb
+Running 1m test @ http://192.168.1.60/100kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   140.42ms   98.24ms   1.68s    87.92%
+    Req/Sec   248.87     46.79   414.00     76.02%
+  59637 requests in 0.94m, 5.71GB read
+  Socket errors: connect 0, read 0, write 0, timeout 254
+Requests/sec:   1054.95
+Transfer/sec:    103.39MB
+=== end ===
+=== 2025-11-09 18:17:36 — workload=http_100kb env=bare run=2/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.60/100kb
+Running 1m test @ http://192.168.1.60/100kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   132.06ms   66.66ms   1.02s    88.88%
+    Req/Sec   253.51     38.99   494.00     78.38%
+  60678 requests in 0.97m, 5.81GB read
+  Socket errors: connect 0, read 0, write 0, timeout 128
+Requests/sec:   1040.46
+Transfer/sec:    101.95MB
+=== end ===
+=== 2025-11-09 18:19:59 — workload=http_100kb env=bare run=3/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.60/100kb
+Running 1m test @ http://192.168.1.60/100kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   131.63ms   65.08ms   1.09s    90.05%
+    Req/Sec   253.94     38.74   494.00     81.13%
+  60958 requests in 0.94m, 5.83GB read
+  Socket errors: connect 0, read 0, write 0, timeout 256
+Requests/sec:   1077.95
+Transfer/sec:    105.61MB
+=== end ===
+=== 2025-11-09 18:22:20 — workload=http_100kb env=bare run=4/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.60/100kb
+Running 1m test @ http://192.168.1.60/100kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   135.70ms   79.02ms   1.18s    87.58%
+    Req/Sec   251.90     44.84     0.86k    80.17%
+  60409 requests in 0.94m, 5.78GB read
+  Socket errors: connect 0, read 0, write 0, timeout 259
+Requests/sec:   1069.17
+Transfer/sec:    104.77MB
+=== end ===
+=== 2025-11-09 18:24:41 — workload=http_100kb env=bare run=5/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.60/100kb
+Running 1m test @ http://192.168.1.60/100kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   132.74ms   72.48ms   1.27s    90.17%
+    Req/Sec   253.76     45.87   810.00     79.88%
+  60726 requests in 0.97m, 5.81GB read
+  Socket errors: connect 0, read 0, write 0, timeout 128
+Requests/sec:   1041.59
+Transfer/sec:    102.07MB
+=== end ===
+=== 2025-11-09 18:27:04 — workload=http_100kb env=bare run=6/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.60/100kb
+Running 1m test @ http://192.168.1.60/100kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   135.90ms   83.93ms   1.56s    88.42%
+    Req/Sec   253.43     44.74   797.00     78.33%
+  60788 requests in 0.94m, 5.82GB read
+  Socket errors: connect 0, read 0, write 0, timeout 256
+Requests/sec:   1073.93
+Transfer/sec:    105.23MB
+=== end ===
+=== 2025-11-09 18:29:26 — workload=http_100kb env=bare run=7/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.60/100kb
+Running 1m test @ http://192.168.1.60/100kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   135.55ms   81.03ms   1.65s    88.94%
+    Req/Sec   253.57     43.30   620.00     78.33%
+  60801 requests in 0.94m, 5.82GB read
+  Socket errors: connect 0, read 0, write 0, timeout 256
+Requests/sec:   1074.31
+Transfer/sec:    105.29MB
+=== end ===

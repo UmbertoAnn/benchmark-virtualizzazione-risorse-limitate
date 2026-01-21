@@ -1,0 +1,273 @@
+=== 2025-11-22 23:42:24 — workload=mongoA env=docker run=1/7 ===
+$ ./ycsb-0.17.0/bin/ycsb.sh run mongodb -s -P ./ycsb-0.17.0/workloads/workloada -p mongodb.url=mongodb://192.168.1.149:27017/ycsb -p threads=4 -p target=1000
+/usr/bin/java  -classpath /mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/conf:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/HdrHistogram-2.1.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/core-0.17.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/htrace-core4-4.1.0-incubating.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/jackson-core-asl-1.9.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/jackson-mapper-asl-1.9.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/logback-classic-1.1.2.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/logback-core-1.1.2.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongo-java-driver-3.8.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongodb-async-driver-2.0.1.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongodb-binding-0.17.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/slf4j-api-1.7.25.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/snappy-java-1.1.7.1.jar site.ycsb.Client -t -db site.ycsb.db.MongoDbClient -s -P ./ycsb-0.17.0/workloads/workloada -p mongodb.url=mongodb://192.168.1.149:27017/ycsb -p threads=4 -p target=1000
+mongo client connection created with mongodb://192.168.1.149:27017/ycsb
+[OVERALL], RunTime(ms), 2208
+[OVERALL], Throughput(ops/sec), 452.8985507246377
+[TOTAL_GCS_G1_Young_Generation], Count, 1
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 5
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.22644927536231885
+[TOTAL_GCS_G1_Concurrent_GC], Count, 0
+[TOTAL_GC_TIME_G1_Concurrent_GC], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Concurrent_GC], Time(%), 0.0
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 5
+[TOTAL_GC_TIME_%], Time(%), 0.22644927536231885
+[READ], Operations, 512
+[READ], AverageLatency(us), 1433.95703125
+[READ], MinLatency(us), 803
+[READ], MaxLatency(us), 16295
+[READ], 95thPercentileLatency(us), 2697
+[READ], 99thPercentileLatency(us), 5379
+[READ], Return=OK, 512
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 3949.0
+[CLEANUP], MinLatency(us), 3948
+[CLEANUP], MaxLatency(us), 3949
+[CLEANUP], 95thPercentileLatency(us), 3949
+[CLEANUP], 99thPercentileLatency(us), 3949
+[UPDATE], Operations, 488
+[UPDATE], AverageLatency(us), 1482.9426229508197
+[UPDATE], MinLatency(us), 792
+[UPDATE], MaxLatency(us), 88511
+[UPDATE], 95thPercentileLatency(us), 2369
+[UPDATE], 99thPercentileLatency(us), 4107
+[UPDATE], Return=OK, 488
+=== end ===
+=== 2025-11-22 23:43:48 — workload=mongoA env=docker run=2/7 ===
+$ ./ycsb-0.17.0/bin/ycsb.sh run mongodb -s -P ./ycsb-0.17.0/workloads/workloada -p mongodb.url=mongodb://192.168.1.149:27017/ycsb -p threads=4 -p target=1000
+/usr/bin/java  -classpath /mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/conf:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/HdrHistogram-2.1.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/core-0.17.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/htrace-core4-4.1.0-incubating.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/jackson-core-asl-1.9.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/jackson-mapper-asl-1.9.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/logback-classic-1.1.2.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/logback-core-1.1.2.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongo-java-driver-3.8.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongodb-async-driver-2.0.1.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongodb-binding-0.17.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/slf4j-api-1.7.25.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/snappy-java-1.1.7.1.jar site.ycsb.Client -t -db site.ycsb.db.MongoDbClient -s -P ./ycsb-0.17.0/workloads/workloada -p mongodb.url=mongodb://192.168.1.149:27017/ycsb -p threads=4 -p target=1000
+mongo client connection created with mongodb://192.168.1.149:27017/ycsb
+[OVERALL], RunTime(ms), 2309
+[OVERALL], Throughput(ops/sec), 433.08791684711997
+[TOTAL_GCS_G1_Young_Generation], Count, 1
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 7
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.303161541792984
+[TOTAL_GCS_G1_Concurrent_GC], Count, 0
+[TOTAL_GC_TIME_G1_Concurrent_GC], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Concurrent_GC], Time(%), 0.0
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 7
+[TOTAL_GC_TIME_%], Time(%), 0.303161541792984
+[READ], Operations, 488
+[READ], AverageLatency(us), 1410.8709016393443
+[READ], MinLatency(us), 744
+[READ], MaxLatency(us), 21519
+[READ], 95thPercentileLatency(us), 2783
+[READ], 99thPercentileLatency(us), 3997
+[READ], Return=OK, 488
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 5822.0
+[CLEANUP], MinLatency(us), 5820
+[CLEANUP], MaxLatency(us), 5823
+[CLEANUP], 95thPercentileLatency(us), 5823
+[CLEANUP], 99thPercentileLatency(us), 5823
+[UPDATE], Operations, 512
+[UPDATE], AverageLatency(us), 1773.685546875
+[UPDATE], MinLatency(us), 730
+[UPDATE], MaxLatency(us), 114943
+[UPDATE], 95thPercentileLatency(us), 2991
+[UPDATE], 99thPercentileLatency(us), 12031
+[UPDATE], Return=OK, 512
+=== end ===
+=== 2025-11-22 23:45:12 — workload=mongoA env=docker run=3/7 ===
+$ ./ycsb-0.17.0/bin/ycsb.sh run mongodb -s -P ./ycsb-0.17.0/workloads/workloada -p mongodb.url=mongodb://192.168.1.149:27017/ycsb -p threads=4 -p target=1000
+/usr/bin/java  -classpath /mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/conf:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/HdrHistogram-2.1.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/core-0.17.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/htrace-core4-4.1.0-incubating.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/jackson-core-asl-1.9.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/jackson-mapper-asl-1.9.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/logback-classic-1.1.2.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/logback-core-1.1.2.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongo-java-driver-3.8.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongodb-async-driver-2.0.1.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongodb-binding-0.17.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/slf4j-api-1.7.25.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/snappy-java-1.1.7.1.jar site.ycsb.Client -t -db site.ycsb.db.MongoDbClient -s -P ./ycsb-0.17.0/workloads/workloada -p mongodb.url=mongodb://192.168.1.149:27017/ycsb -p threads=4 -p target=1000
+mongo client connection created with mongodb://192.168.1.149:27017/ycsb
+[OVERALL], RunTime(ms), 2111
+[OVERALL], Throughput(ops/sec), 473.70914258645195
+[TOTAL_GCS_G1_Young_Generation], Count, 1
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 5
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.23685457129322599
+[TOTAL_GCS_G1_Concurrent_GC], Count, 0
+[TOTAL_GC_TIME_G1_Concurrent_GC], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Concurrent_GC], Time(%), 0.0
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 5
+[TOTAL_GC_TIME_%], Time(%), 0.23685457129322599
+[READ], Operations, 484
+[READ], AverageLatency(us), 1489.4462809917356
+[READ], MinLatency(us), 729
+[READ], MaxLatency(us), 95295
+[READ], 95thPercentileLatency(us), 2345
+[READ], 99thPercentileLatency(us), 6055
+[READ], Return=OK, 484
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 4798.0
+[CLEANUP], MinLatency(us), 4796
+[CLEANUP], MaxLatency(us), 4799
+[CLEANUP], 95thPercentileLatency(us), 4799
+[CLEANUP], 99thPercentileLatency(us), 4799
+[UPDATE], Operations, 516
+[UPDATE], AverageLatency(us), 1203.4825581395348
+[UPDATE], MinLatency(us), 704
+[UPDATE], MaxLatency(us), 17151
+[UPDATE], 95thPercentileLatency(us), 1904
+[UPDATE], 99thPercentileLatency(us), 4503
+[UPDATE], Return=OK, 516
+=== end ===
+=== 2025-11-22 23:46:39 — workload=mongoA env=docker run=4/7 ===
+$ ./ycsb-0.17.0/bin/ycsb.sh run mongodb -s -P ./ycsb-0.17.0/workloads/workloada -p mongodb.url=mongodb://192.168.1.149:27017/ycsb -p threads=4 -p target=1000
+/usr/bin/java  -classpath /mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/conf:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/HdrHistogram-2.1.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/core-0.17.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/htrace-core4-4.1.0-incubating.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/jackson-core-asl-1.9.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/jackson-mapper-asl-1.9.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/logback-classic-1.1.2.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/logback-core-1.1.2.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongo-java-driver-3.8.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongodb-async-driver-2.0.1.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongodb-binding-0.17.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/slf4j-api-1.7.25.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/snappy-java-1.1.7.1.jar site.ycsb.Client -t -db site.ycsb.db.MongoDbClient -s -P ./ycsb-0.17.0/workloads/workloada -p mongodb.url=mongodb://192.168.1.149:27017/ycsb -p threads=4 -p target=1000
+mongo client connection created with mongodb://192.168.1.149:27017/ycsb
+[OVERALL], RunTime(ms), 2192
+[OVERALL], Throughput(ops/sec), 456.2043795620438
+[TOTAL_GCS_G1_Young_Generation], Count, 1
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 4
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.18248175182481752
+[TOTAL_GCS_G1_Concurrent_GC], Count, 0
+[TOTAL_GC_TIME_G1_Concurrent_GC], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Concurrent_GC], Time(%), 0.0
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 4
+[TOTAL_GC_TIME_%], Time(%), 0.18248175182481752
+[READ], Operations, 518
+[READ], AverageLatency(us), 1474.3938223938223
+[READ], MinLatency(us), 739
+[READ], MaxLatency(us), 26335
+[READ], 95thPercentileLatency(us), 2713
+[READ], 99thPercentileLatency(us), 8671
+[READ], Return=OK, 518
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 5066.0
+[CLEANUP], MinLatency(us), 5064
+[CLEANUP], MaxLatency(us), 5067
+[CLEANUP], 95thPercentileLatency(us), 5067
+[CLEANUP], 99thPercentileLatency(us), 5067
+[UPDATE], Operations, 482
+[UPDATE], AverageLatency(us), 1607.9253112033196
+[UPDATE], MinLatency(us), 748
+[UPDATE], MaxLatency(us), 116607
+[UPDATE], 95thPercentileLatency(us), 2949
+[UPDATE], 99thPercentileLatency(us), 5755
+[UPDATE], Return=OK, 482
+=== end ===
+=== 2025-11-22 23:48:03 — workload=mongoA env=docker run=5/7 ===
+$ ./ycsb-0.17.0/bin/ycsb.sh run mongodb -s -P ./ycsb-0.17.0/workloads/workloada -p mongodb.url=mongodb://192.168.1.149:27017/ycsb -p threads=4 -p target=1000
+/usr/bin/java  -classpath /mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/conf:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/HdrHistogram-2.1.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/core-0.17.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/htrace-core4-4.1.0-incubating.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/jackson-core-asl-1.9.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/jackson-mapper-asl-1.9.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/logback-classic-1.1.2.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/logback-core-1.1.2.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongo-java-driver-3.8.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongodb-async-driver-2.0.1.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongodb-binding-0.17.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/slf4j-api-1.7.25.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/snappy-java-1.1.7.1.jar site.ycsb.Client -t -db site.ycsb.db.MongoDbClient -s -P ./ycsb-0.17.0/workloads/workloada -p mongodb.url=mongodb://192.168.1.149:27017/ycsb -p threads=4 -p target=1000
+mongo client connection created with mongodb://192.168.1.149:27017/ycsb
+[OVERALL], RunTime(ms), 2214
+[OVERALL], Throughput(ops/sec), 451.6711833785005
+[TOTAL_GCS_G1_Young_Generation], Count, 1
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 9
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.40650406504065045
+[TOTAL_GCS_G1_Concurrent_GC], Count, 0
+[TOTAL_GC_TIME_G1_Concurrent_GC], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Concurrent_GC], Time(%), 0.0
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 9
+[TOTAL_GC_TIME_%], Time(%), 0.40650406504065045
+[READ], Operations, 488
+[READ], AverageLatency(us), 1363.5
+[READ], MinLatency(us), 776
+[READ], MaxLatency(us), 17615
+[READ], 95thPercentileLatency(us), 2059
+[READ], 99thPercentileLatency(us), 6415
+[READ], Return=OK, 488
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 4178.0
+[CLEANUP], MinLatency(us), 4176
+[CLEANUP], MaxLatency(us), 4179
+[CLEANUP], 95thPercentileLatency(us), 4179
+[CLEANUP], 99thPercentileLatency(us), 4179
+[UPDATE], Operations, 512
+[UPDATE], AverageLatency(us), 1478.138671875
+[UPDATE], MinLatency(us), 761
+[UPDATE], MaxLatency(us), 86527
+[UPDATE], 95thPercentileLatency(us), 2157
+[UPDATE], 99thPercentileLatency(us), 6603
+[UPDATE], Return=OK, 512
+=== end ===
+=== 2025-11-22 23:49:26 — workload=mongoA env=docker run=6/7 ===
+$ ./ycsb-0.17.0/bin/ycsb.sh run mongodb -s -P ./ycsb-0.17.0/workloads/workloada -p mongodb.url=mongodb://192.168.1.149:27017/ycsb -p threads=4 -p target=1000
+/usr/bin/java  -classpath /mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/conf:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/HdrHistogram-2.1.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/core-0.17.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/htrace-core4-4.1.0-incubating.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/jackson-core-asl-1.9.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/jackson-mapper-asl-1.9.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/logback-classic-1.1.2.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/logback-core-1.1.2.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongo-java-driver-3.8.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongodb-async-driver-2.0.1.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongodb-binding-0.17.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/slf4j-api-1.7.25.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/snappy-java-1.1.7.1.jar site.ycsb.Client -t -db site.ycsb.db.MongoDbClient -s -P ./ycsb-0.17.0/workloads/workloada -p mongodb.url=mongodb://192.168.1.149:27017/ycsb -p threads=4 -p target=1000
+mongo client connection created with mongodb://192.168.1.149:27017/ycsb
+[OVERALL], RunTime(ms), 2215
+[OVERALL], Throughput(ops/sec), 451.46726862302484
+[TOTAL_GCS_G1_Young_Generation], Count, 1
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 5
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.2257336343115124
+[TOTAL_GCS_G1_Concurrent_GC], Count, 0
+[TOTAL_GC_TIME_G1_Concurrent_GC], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Concurrent_GC], Time(%), 0.0
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 5
+[TOTAL_GC_TIME_%], Time(%), 0.2257336343115124
+[READ], Operations, 465
+[READ], AverageLatency(us), 1446.152688172043
+[READ], MinLatency(us), 727
+[READ], MaxLatency(us), 16415
+[READ], 95thPercentileLatency(us), 2229
+[READ], 99thPercentileLatency(us), 5043
+[READ], Return=OK, 465
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 4158.0
+[CLEANUP], MinLatency(us), 4156
+[CLEANUP], MaxLatency(us), 4159
+[CLEANUP], 95thPercentileLatency(us), 4159
+[CLEANUP], 99thPercentileLatency(us), 4159
+[UPDATE], Operations, 535
+[UPDATE], AverageLatency(us), 1499.996261682243
+[UPDATE], MinLatency(us), 718
+[UPDATE], MaxLatency(us), 81471
+[UPDATE], 95thPercentileLatency(us), 1893
+[UPDATE], 99thPercentileLatency(us), 4959
+[UPDATE], Return=OK, 535
+=== end ===
+=== 2025-11-22 23:50:50 — workload=mongoA env=docker run=7/7 ===
+$ ./ycsb-0.17.0/bin/ycsb.sh run mongodb -s -P ./ycsb-0.17.0/workloads/workloada -p mongodb.url=mongodb://192.168.1.149:27017/ycsb -p threads=4 -p target=1000
+/usr/bin/java  -classpath /mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/conf:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/HdrHistogram-2.1.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/core-0.17.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/htrace-core4-4.1.0-incubating.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/jackson-core-asl-1.9.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/jackson-mapper-asl-1.9.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/logback-classic-1.1.2.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/logback-core-1.1.2.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongo-java-driver-3.8.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongodb-async-driver-2.0.1.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongodb-binding-0.17.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/slf4j-api-1.7.25.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/snappy-java-1.1.7.1.jar site.ycsb.Client -t -db site.ycsb.db.MongoDbClient -s -P ./ycsb-0.17.0/workloads/workloada -p mongodb.url=mongodb://192.168.1.149:27017/ycsb -p threads=4 -p target=1000
+mongo client connection created with mongodb://192.168.1.149:27017/ycsb
+[OVERALL], RunTime(ms), 2141
+[OVERALL], Throughput(ops/sec), 467.07146193367583
+[TOTAL_GCS_G1_Young_Generation], Count, 1
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 4
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.18682858477347034
+[TOTAL_GCS_G1_Concurrent_GC], Count, 0
+[TOTAL_GC_TIME_G1_Concurrent_GC], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Concurrent_GC], Time(%), 0.0
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 4
+[TOTAL_GC_TIME_%], Time(%), 0.18682858477347034
+[READ], Operations, 456
+[READ], AverageLatency(us), 1577.203947368421
+[READ], MinLatency(us), 744
+[READ], MaxLatency(us), 84031
+[READ], 95thPercentileLatency(us), 2483
+[READ], 99thPercentileLatency(us), 6983
+[READ], Return=OK, 456
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 4222.0
+[CLEANUP], MinLatency(us), 4220
+[CLEANUP], MaxLatency(us), 4223
+[CLEANUP], 95thPercentileLatency(us), 4223
+[CLEANUP], 99thPercentileLatency(us), 4223
+[UPDATE], Operations, 544
+[UPDATE], AverageLatency(us), 1372.952205882353
+[UPDATE], MinLatency(us), 711
+[UPDATE], MaxLatency(us), 15183
+[UPDATE], 95thPercentileLatency(us), 2451
+[UPDATE], 99thPercentileLatency(us), 4931
+[UPDATE], Return=OK, 544
+=== end ===

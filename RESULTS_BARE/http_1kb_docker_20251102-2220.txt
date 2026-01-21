@@ -1,0 +1,11 @@
+=== 2025-11-02 22:20:47 — workload=http_1kb env=docker run=3/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/1kb
+Running 1m test @ http://192.168.1.149/1kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    24.39ms  123.06ms   1.47s    98.00%
+    Req/Sec     4.08k   561.62    14.09k    88.61%
+  976432 requests in 1.03m, 1.17GB read
+Requests/sec:  15870.71
+Transfer/sec:     19.48MB
+=== end ===

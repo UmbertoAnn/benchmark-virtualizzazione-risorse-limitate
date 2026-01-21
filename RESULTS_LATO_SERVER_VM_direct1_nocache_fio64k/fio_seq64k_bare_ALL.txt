@@ -1,0 +1,267 @@
+=== 2025-12-26 17:47:00 — workload=fio_seq64k env=bare run=1/7 ===
+$ fio --name=bench --filename=/srv/bench/io/testfile --rw=read --bs=64k --iodepth=32 --numjobs=4 --size=2G --time_based --runtime=60 --direct=1 --group_reporting
+bench: (g=0): rw=read, bs=(R) 64.0KiB-64.0KiB, (W) 64.0KiB-64.0KiB, (T) 64.0KiB-64.0KiB, ioengine=psync, iodepth=32
+...
+fio-3.36
+Starting 4 processes
+bench: Laying out IO file (1 file / 2048MiB)
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+
+bench: (groupid=0, jobs=4): err= 0: pid=3439: Fri Dec 26 17:48:07 2025
+  read: IOPS=16.3k, BW=1018MiB/s (1068MB/s)(59.7GiB/60001msec)
+    clat (usec): min=84, max=2771, avg=241.98, stdev=72.03
+     lat (usec): min=85, max=2772, avg=242.34, stdev=72.08
+    clat percentiles (usec):
+     |  1.00th=[  120],  5.00th=[  149], 10.00th=[  163], 20.00th=[  184],
+     | 30.00th=[  206], 40.00th=[  223], 50.00th=[  235], 60.00th=[  247],
+     | 70.00th=[  265], 80.00th=[  289], 90.00th=[  330], 95.00th=[  371],
+     | 99.00th=[  453], 99.50th=[  502], 99.90th=[  676], 99.95th=[  824],
+     | 99.99th=[ 1319]
+   bw (  KiB/s): min=882628, max=1395592, per=100.00%, avg=1044755.55, stdev=38499.59, samples=476
+   iops        : min=13791, max=21806, avg=16323.64, stdev=601.57, samples=476
+  lat (usec)   : 100=0.02%, 250=61.60%, 500=37.88%, 750=0.44%, 1000=0.04%
+  lat (msec)   : 2=0.03%, 4=0.01%
+  cpu          : usr=4.40%, sys=17.90%, ctx=981165, majf=0, minf=115
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=977511,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=1018MiB/s (1068MB/s), 1018MiB/s-1018MiB/s (1068MB/s-1068MB/s), io=59.7GiB (64.1GB), run=60001-60001msec
+
+Disk stats (read/write):
+  vda: ios=985245/32, sectors=124662000/744, merge=57/61, ticks=186722/27, in_queue=186751, util=59.12%
+=== end ===
+=== 2025-12-26 17:49:37 — workload=fio_seq64k env=bare run=2/7 ===
+$ fio --name=bench --filename=/srv/bench/io/testfile --rw=read --bs=64k --iodepth=32 --numjobs=4 --size=2G --time_based --runtime=60 --direct=1 --group_reporting
+bench: (g=0): rw=read, bs=(R) 64.0KiB-64.0KiB, (W) 64.0KiB-64.0KiB, (T) 64.0KiB-64.0KiB, ioengine=psync, iodepth=32
+...
+fio-3.36
+Starting 4 processes
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+
+bench: (groupid=0, jobs=4): err= 0: pid=3461: Fri Dec 26 17:50:37 2025
+  read: IOPS=16.9k, BW=1059MiB/s (1110MB/s)(62.1GiB/60002msec)
+    clat (usec): min=91, max=3662, avg=232.66, stdev=70.64
+     lat (usec): min=91, max=3663, avg=233.03, stdev=70.69
+    clat percentiles (usec):
+     |  1.00th=[  124],  5.00th=[  151], 10.00th=[  163], 20.00th=[  178],
+     | 30.00th=[  194], 40.00th=[  212], 50.00th=[  225], 60.00th=[  237],
+     | 70.00th=[  251], 80.00th=[  273], 90.00th=[  314], 95.00th=[  355],
+     | 99.00th=[  453], 99.50th=[  502], 99.90th=[  676], 99.95th=[  840],
+     | 99.99th=[ 1500]
+   bw (  MiB/s): min=  845, max= 1401, per=100.00%, avg=1060.92, stdev=37.67, samples=476
+   iops        : min=13525, max=22418, avg=16974.38, stdev=602.67, samples=476
+  lat (usec)   : 100=0.01%, 250=69.38%, 500=30.10%, 750=0.44%, 1000=0.04%
+  lat (msec)   : 2=0.03%, 4=0.01%
+  cpu          : usr=3.93%, sys=18.40%, ctx=1019401, majf=0, minf=117
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=1016709,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=1059MiB/s (1110MB/s), 1059MiB/s-1059MiB/s (1110MB/s-1110MB/s), io=62.1GiB (66.6GB), run=60002-60002msec
+
+Disk stats (read/write):
+  vda: ios=1026284/45, sectors=129900496/608, merge=86/20, ticks=183688/28, in_queue=183724, util=57.63%
+=== end ===
+=== 2025-12-26 17:52:07 — workload=fio_seq64k env=bare run=3/7 ===
+$ fio --name=bench --filename=/srv/bench/io/testfile --rw=read --bs=64k --iodepth=32 --numjobs=4 --size=2G --time_based --runtime=60 --direct=1 --group_reporting
+bench: (g=0): rw=read, bs=(R) 64.0KiB-64.0KiB, (W) 64.0KiB-64.0KiB, (T) 64.0KiB-64.0KiB, ioengine=psync, iodepth=32
+...
+fio-3.36
+Starting 4 processes
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+
+bench: (groupid=0, jobs=4): err= 0: pid=3486: Fri Dec 26 17:53:07 2025
+  read: IOPS=16.9k, BW=1053MiB/s (1104MB/s)(61.7GiB/60001msec)
+    clat (usec): min=87, max=3443, avg=233.94, stdev=68.72
+     lat (usec): min=87, max=3444, avg=234.29, stdev=68.76
+    clat percentiles (usec):
+     |  1.00th=[  124],  5.00th=[  151], 10.00th=[  163], 20.00th=[  180],
+     | 30.00th=[  198], 40.00th=[  215], 50.00th=[  227], 60.00th=[  241],
+     | 70.00th=[  253], 80.00th=[  273], 90.00th=[  314], 95.00th=[  355],
+     | 99.00th=[  449], 99.50th=[  494], 99.90th=[  660], 99.95th=[  832],
+     | 99.99th=[ 1418]
+   bw (  MiB/s): min=  887, max= 1378, per=100.00%, avg=1055.32, stdev=34.28, samples=476
+   iops        : min=14200, max=22056, avg=16885.01, stdev=548.48, samples=476
+  lat (usec)   : 100=0.01%, 250=68.16%, 500=31.37%, 750=0.39%, 1000=0.03%
+  lat (msec)   : 2=0.03%, 4=0.01%
+  cpu          : usr=4.06%, sys=18.12%, ctx=1013752, majf=0, minf=116
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=1011185,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=1053MiB/s (1104MB/s), 1053MiB/s-1053MiB/s (1104MB/s-1104MB/s), io=61.7GiB (66.3GB), run=60001-60001msec
+
+Disk stats (read/write):
+  vda: ios=1020641/10, sectors=129190016/128, merge=0/6, ticks=182221/6, in_queue=182228, util=58.45%
+=== end ===
+=== 2025-12-26 17:54:38 — workload=fio_seq64k env=bare run=4/7 ===
+$ fio --name=bench --filename=/srv/bench/io/testfile --rw=read --bs=64k --iodepth=32 --numjobs=4 --size=2G --time_based --runtime=60 --direct=1 --group_reporting
+bench: (g=0): rw=read, bs=(R) 64.0KiB-64.0KiB, (W) 64.0KiB-64.0KiB, (T) 64.0KiB-64.0KiB, ioengine=psync, iodepth=32
+...
+fio-3.36
+Starting 4 processes
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+
+bench: (groupid=0, jobs=4): err= 0: pid=3506: Fri Dec 26 17:55:38 2025
+  read: IOPS=17.0k, BW=1063MiB/s (1114MB/s)(62.3GiB/60002msec)
+    clat (usec): min=88, max=3626, avg=231.77, stdev=70.14
+     lat (usec): min=89, max=3627, avg=232.12, stdev=70.18
+    clat percentiles (usec):
+     |  1.00th=[  123],  5.00th=[  149], 10.00th=[  161], 20.00th=[  178],
+     | 30.00th=[  196], 40.00th=[  212], 50.00th=[  227], 60.00th=[  239],
+     | 70.00th=[  251], 80.00th=[  269], 90.00th=[  310], 95.00th=[  351],
+     | 99.00th=[  445], 99.50th=[  494], 99.90th=[  685], 99.95th=[  881],
+     | 99.99th=[ 1500]
+   bw (  MiB/s): min=  871, max= 1384, per=100.00%, avg=1064.62, stdev=36.80, samples=476
+   iops        : min=13936, max=22149, avg=17033.63, stdev=588.84, samples=476
+  lat (usec)   : 100=0.01%, 250=69.84%, 500=29.69%, 750=0.39%, 1000=0.04%
+  lat (msec)   : 2=0.03%, 4=0.01%
+  cpu          : usr=4.09%, sys=18.09%, ctx=1022672, majf=0, minf=112
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=1020253,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=1063MiB/s (1114MB/s), 1063MiB/s-1063MiB/s (1114MB/s-1114MB/s), io=62.3GiB (66.9GB), run=60002-60002msec
+
+Disk stats (read/write):
+  vda: ios=1029847/35, sectors=130350176/520, merge=29/23, ticks=181493/21, in_queue=181517, util=57.81%
+=== end ===
+=== 2025-12-26 17:57:08 — workload=fio_seq64k env=bare run=5/7 ===
+$ fio --name=bench --filename=/srv/bench/io/testfile --rw=read --bs=64k --iodepth=32 --numjobs=4 --size=2G --time_based --runtime=60 --direct=1 --group_reporting
+bench: (g=0): rw=read, bs=(R) 64.0KiB-64.0KiB, (W) 64.0KiB-64.0KiB, (T) 64.0KiB-64.0KiB, ioengine=psync, iodepth=32
+...
+fio-3.36
+Starting 4 processes
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+
+bench: (groupid=0, jobs=4): err= 0: pid=3528: Fri Dec 26 17:58:08 2025
+  read: IOPS=16.7k, BW=1045MiB/s (1095MB/s)(61.2GiB/60001msec)
+    clat (usec): min=83, max=4207, avg=235.92, stdev=75.55
+     lat (usec): min=83, max=4208, avg=236.28, stdev=75.59
+    clat percentiles (usec):
+     |  1.00th=[  120],  5.00th=[  145], 10.00th=[  159], 20.00th=[  176],
+     | 30.00th=[  196], 40.00th=[  212], 50.00th=[  227], 60.00th=[  241],
+     | 70.00th=[  258], 80.00th=[  281], 90.00th=[  326], 95.00th=[  367],
+     | 99.00th=[  461], 99.50th=[  506], 99.90th=[  685], 99.95th=[  906],
+     | 99.99th=[ 1598]
+   bw (  MiB/s): min=  859, max= 1359, per=100.00%, avg=1046.41, stdev=39.65, samples=476
+   iops        : min=13753, max=21758, avg=16742.01, stdev=634.43, samples=476
+  lat (usec)   : 100=0.02%, 250=65.65%, 500=33.78%, 750=0.48%, 1000=0.03%
+  lat (msec)   : 2=0.04%, 4=0.01%, 10=0.01%
+  cpu          : usr=4.07%, sys=17.83%, ctx=1006072, majf=0, minf=119
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=1002835,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=1045MiB/s (1095MB/s), 1045MiB/s-1045MiB/s (1095MB/s-1095MB/s), io=61.2GiB (65.7GB), run=60001-60001msec
+
+Disk stats (read/write):
+  vda: ios=1012287/4, sectors=128122752/88, merge=0/7, ticks=183834/2, in_queue=183839, util=58.61%
+=== end ===
+=== 2025-12-26 17:59:38 — workload=fio_seq64k env=bare run=6/7 ===
+$ fio --name=bench --filename=/srv/bench/io/testfile --rw=read --bs=64k --iodepth=32 --numjobs=4 --size=2G --time_based --runtime=60 --direct=1 --group_reporting
+bench: (g=0): rw=read, bs=(R) 64.0KiB-64.0KiB, (W) 64.0KiB-64.0KiB, (T) 64.0KiB-64.0KiB, ioengine=psync, iodepth=32
+...
+fio-3.36
+Starting 4 processes
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+
+bench: (groupid=0, jobs=4): err= 0: pid=3547: Fri Dec 26 18:00:39 2025
+  read: IOPS=17.0k, BW=1064MiB/s (1116MB/s)(62.4GiB/60004msec)
+    clat (usec): min=91, max=4415, avg=231.52, stdev=69.88
+     lat (usec): min=92, max=4416, avg=231.87, stdev=69.92
+    clat percentiles (usec):
+     |  1.00th=[  122],  5.00th=[  149], 10.00th=[  161], 20.00th=[  176],
+     | 30.00th=[  194], 40.00th=[  212], 50.00th=[  225], 60.00th=[  237],
+     | 70.00th=[  251], 80.00th=[  273], 90.00th=[  314], 95.00th=[  351],
+     | 99.00th=[  449], 99.50th=[  498], 99.90th=[  676], 99.95th=[  857],
+     | 99.99th=[ 1450]
+   bw (  MiB/s): min=  854, max= 1387, per=100.00%, avg=1066.33, stdev=36.80, samples=476
+   iops        : min=13666, max=22206, avg=17061.13, stdev=588.75, samples=476
+  lat (usec)   : 100=0.02%, 250=69.94%, 500=29.56%, 750=0.42%, 1000=0.03%
+  lat (msec)   : 2=0.03%, 4=0.01%, 10=0.01%
+  cpu          : usr=4.09%, sys=18.21%, ctx=1024250, majf=0, minf=114
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=1021588,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=1064MiB/s (1116MB/s), 1064MiB/s-1064MiB/s (1116MB/s-1116MB/s), io=62.4GiB (66.9GB), run=60004-60004msec
+
+Disk stats (read/write):
+  vda: ios=1031228/30, sectors=130528128/472, merge=0/17, ticks=181810/14, in_queue=181826, util=57.24%
+=== end ===
+=== 2025-12-26 18:02:09 — workload=fio_seq64k env=bare run=7/7 ===
+$ fio --name=bench --filename=/srv/bench/io/testfile --rw=read --bs=64k --iodepth=32 --numjobs=4 --size=2G --time_based --runtime=60 --direct=1 --group_reporting
+bench: (g=0): rw=read, bs=(R) 64.0KiB-64.0KiB, (W) 64.0KiB-64.0KiB, (T) 64.0KiB-64.0KiB, ioengine=psync, iodepth=32
+...
+fio-3.36
+Starting 4 processes
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+
+bench: (groupid=0, jobs=4): err= 0: pid=3571: Fri Dec 26 18:03:09 2025
+  read: IOPS=17.2k, BW=1074MiB/s (1126MB/s)(62.9GiB/60003msec)
+    clat (usec): min=92, max=4693, avg=229.44, stdev=71.15
+     lat (usec): min=92, max=4693, avg=229.79, stdev=71.20
+    clat percentiles (usec):
+     |  1.00th=[  123],  5.00th=[  147], 10.00th=[  161], 20.00th=[  174],
+     | 30.00th=[  190], 40.00th=[  208], 50.00th=[  223], 60.00th=[  237],
+     | 70.00th=[  251], 80.00th=[  269], 90.00th=[  310], 95.00th=[  351],
+     | 99.00th=[  445], 99.50th=[  494], 99.90th=[  668], 99.95th=[  873],
+     | 99.99th=[ 1516]
+   bw (  MiB/s): min=  871, max= 1428, per=100.00%, avg=1076.47, stdev=40.61, samples=476
+   iops        : min=13948, max=22856, avg=17223.34, stdev=649.80, samples=476
+  lat (usec)   : 100=0.02%, 250=69.68%, 500=29.84%, 750=0.39%, 1000=0.03%
+  lat (msec)   : 2=0.03%, 4=0.01%, 10=0.01%
+  cpu          : usr=4.11%, sys=18.28%, ctx=1033502, majf=0, minf=110
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=1030940,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=1074MiB/s (1126MB/s), 1074MiB/s-1074MiB/s (1126MB/s-1126MB/s), io=62.9GiB (67.6GB), run=60003-60003msec
+
+Disk stats (read/write):
+  vda: ios=1040761/15, sectors=131724288/216, merge=0/12, ticks=182146/8, in_queue=182157, util=57.66%
+=== end ===

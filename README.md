@@ -1,1 +1,137 @@
-# benchmark-virtualizzazione-risorse-limitate
+# Benchmarking di Virtualizzazione e Containerizzazione su Hardware a Risorse Limitate
+
+## Panoramica
+
+Questo repository contiene gli **artefatti sperimentali e i risultati dei benchmark** prodotti nell’ambito di una tesi di laurea magistrale dedicata alla **valutazione delle prestazioni di ambienti bare metal, virtualizzati e containerizzati** su **hardware caratterizzato da risorse limitate**.
+
+L’obiettivo dell’attività sperimentale è analizzare l’overhead introdotto da:
+- virtualizzazione hardware (macchine virtuali),
+- virtualizzazione a livello di sistema operativo (container Docker),
+- e dalla combinazione delle due tecnologie,
+
+utilizzando sia **carichi di lavoro sintetici** sia **benchmark applicativi**.
+
+Tutti i test sono stati eseguiti tramite **script di automazione**, al fine di garantire ripetibilità e coerenza dei risultati.
+
+---
+
+## Struttura del repository
+
+Il repository è organizzato come segue:
+
+- ├── RESULTS_BARE/
+- │ ├── http_1kb_bare_YYYYMMDD-HHMM.txt
+- │ ├── redis_bare_YYYYMMDD-HHMM.txt
+- │ └── ...
+- │
+- ├── RESULTS_VM/
+- │ ├── http_1kb_vm_YYYYMMDD-HHMM.txt
+- │ ├── postgres_vm_YYYYMMDD-HHMM.txt
+- │ └── ...
+- │
+- ├── RESULTS_LATO_SERVER_BARE/
+- │ ├── sysbench_cpu_bare_.txt
+- │ ├── fio_seq64k_bare_.txt
+- │ └── ...
+- │
+- ├── RESULTS_LATO_SERVER_VM/
+- │ ├── sysbench_cpu_vm_.txt
+- │ ├── fio_seq64k_vm_.txt
+- │ └── ...
+- │
+- ├── scripts/
+- │ ├── run_bench.sh
+- │ ├── Makefile.client
+- │ └── Makefile.server
+- │
+- └── README.md
+
+
+---
+
+## Ambienti sperimentali considerati
+
+Gli esperimenti sono stati condotti nei seguenti ambienti di esecuzione:
+
+- **Bare metal**
+- **Docker su bare metal**
+- **Macchina virtuale (KVM)**
+- **Docker su macchina virtuale**
+
+Per i **benchmark sintetici lato server** (CPU, memoria e rete) sono state considerate esclusivamente le configurazioni **bare metal** e **macchina virtuale**, in quanto i container condividono il kernel del sistema host e non introducono un ambiente di esecuzione kernel-level distinto.
+
+---
+
+## Benchmark utilizzati
+
+### Benchmark lato server
+- **sysbench** – valutazione delle prestazioni CPU e memoria
+- **fio** – analisi delle prestazioni del sottosistema di I/O su storage
+- **stress-ng** – test qualitativi di stabilità del sistema sotto carico misto
+- **iperf3** – caratterizzazione del sottosistema di rete
+
+### Benchmark lato client
+- **wrk** – benchmarking HTTP del web server Nginx
+- **pgbench** – valutazione delle prestazioni del database PostgreSQL
+- **memtier_benchmark** – benchmarking del database Redis
+- **YCSB** – valutazione delle prestazioni del database MongoDB
+
+---
+
+## Convenzione di denominazione dei file di risultato
+
+Ogni esecuzione di benchmark produce un file di output testuale denominato secondo la seguente convenzione:
+
+<workload><ambiente><YYYYMMDD-HHMM>.txt
+
+
+Esempio:
+
+http_1kb_bare_20251122-2311.txt
+
+
+Dove:
+- `<workload>` identifica il tipo di benchmark eseguito,
+- `<ambiente>` indica l’ambiente di esecuzione,
+- `<YYYYMMDD-HHMM>` rappresenta la data e l’orario di esecuzione.
+
+Ogni benchmark è stato eseguito **sette volte**; i risultati riportati nella tesi rappresentano la **media aritmetica di tutte le esecuzioni**.
+
+---
+
+## Riproducibilità degli esperimenti
+
+I benchmark sono stati eseguiti mediante script di automazione (`run_bench.sh`) e Makefile, in modo da garantire la riproducibilità delle misure.  
+I dettagli relativi alla configurazione degli ambienti, ai parametri di esecuzione e alla procedura sperimentale sono descritti nella tesi e supportati dai file presenti in questo repository.
+
+Questo repository è reso disponibile al fine di:
+- garantire **trasparenza**,
+- consentire la **verifica dei risultati**,
+- facilitare **eventuali estensioni future** del lavoro sperimentale.
+
+---
+
+## Relazione con la tesi
+
+Il presente repository accompagna la tesi di laurea magistrale:
+
+> **Valutazione delle prestazioni di virtualizzazione e containerizzazione su sistemi a risorse limitate**
+
+Il repository contiene esclusivamente **materiale sperimentale** (script e output dei benchmark).  
+L’analisi dei dati, la loro aggregazione e l’interpretazione dei risultati sono discusse all’interno del documento di tesi.
+
+---
+
+## Note
+
+- Gli output dei benchmark sono mantenuti in forma grezza per evitare alterazioni dovute a post-elaborazioni.
+- I grafici e i risultati aggregati sono stati generati separatamente a partire da tali output.
+- Il repository non è concepito come framework di benchmarking, ma come **materiale di supporto a fini accademici**.
+
+---
+
+## Licenza
+
+Il materiale contenuto in questo repository è fornito esclusivamente per scopi accademici e di ricerca.
+
+

@@ -1,0 +1,38 @@
+=== 2025-12-26 17:52:07 — workload=fio_seq64k env=bare run=3/7 ===
+$ fio --name=bench --filename=/srv/bench/io/testfile --rw=read --bs=64k --iodepth=32 --numjobs=4 --size=2G --time_based --runtime=60 --direct=1 --group_reporting
+bench: (g=0): rw=read, bs=(R) 64.0KiB-64.0KiB, (W) 64.0KiB-64.0KiB, (T) 64.0KiB-64.0KiB, ioengine=psync, iodepth=32
+...
+fio-3.36
+Starting 4 processes
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+
+bench: (groupid=0, jobs=4): err= 0: pid=3486: Fri Dec 26 17:53:07 2025
+  read: IOPS=16.9k, BW=1053MiB/s (1104MB/s)(61.7GiB/60001msec)
+    clat (usec): min=87, max=3443, avg=233.94, stdev=68.72
+     lat (usec): min=87, max=3444, avg=234.29, stdev=68.76
+    clat percentiles (usec):
+     |  1.00th=[  124],  5.00th=[  151], 10.00th=[  163], 20.00th=[  180],
+     | 30.00th=[  198], 40.00th=[  215], 50.00th=[  227], 60.00th=[  241],
+     | 70.00th=[  253], 80.00th=[  273], 90.00th=[  314], 95.00th=[  355],
+     | 99.00th=[  449], 99.50th=[  494], 99.90th=[  660], 99.95th=[  832],
+     | 99.99th=[ 1418]
+   bw (  MiB/s): min=  887, max= 1378, per=100.00%, avg=1055.32, stdev=34.28, samples=476
+   iops        : min=14200, max=22056, avg=16885.01, stdev=548.48, samples=476
+  lat (usec)   : 100=0.01%, 250=68.16%, 500=31.37%, 750=0.39%, 1000=0.03%
+  lat (msec)   : 2=0.03%, 4=0.01%
+  cpu          : usr=4.06%, sys=18.12%, ctx=1013752, majf=0, minf=116
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=1011185,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=1053MiB/s (1104MB/s), 1053MiB/s-1053MiB/s (1104MB/s-1104MB/s), io=61.7GiB (66.3GB), run=60001-60001msec
+
+Disk stats (read/write):
+  vda: ios=1020641/10, sectors=129190016/128, merge=0/6, ticks=182221/6, in_queue=182228, util=58.45%
+=== end ===

@@ -1,0 +1,11 @@
+=== 2025-11-02 18:51:50 — workload=http_1kb env=bare run=4/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/1kb
+Running 1m test @ http://192.168.1.149/1kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    25.78ms  116.24ms   1.16s    97.12%
+    Req/Sec     5.01k   831.90    14.40k    86.52%
+  1200550 requests in 1.04m, 1.44GB read
+Requests/sec:  19263.95
+Transfer/sec:     23.64MB
+=== end ===

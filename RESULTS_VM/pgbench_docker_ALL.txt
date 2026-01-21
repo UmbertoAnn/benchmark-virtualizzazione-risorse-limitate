@@ -1,0 +1,112 @@
+=== 2025-11-16 15:58:55 — workload=pgbench env=docker run=1/7 ===
+$ pgbench -h 192.168.1.60 -U postgres -c 32 -j 8 -T 60 postgres
+pgbench (16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 32
+number of threads: 8
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 37540
+number of failed transactions: 0 (0.000%)
+latency average = 51.029 ms
+initial connection time = 310.656 ms
+tps = 627.090737 (without initial connection time)
+=== end ===
+=== 2025-11-16 16:01:19 — workload=pgbench env=docker run=2/7 ===
+$ pgbench -h 192.168.1.60 -U postgres -c 32 -j 8 -T 60 postgres
+pgbench (16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 32
+number of threads: 8
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 38223
+number of failed transactions: 0 (0.000%)
+latency average = 50.128 ms
+initial connection time = 276.251 ms
+tps = 638.371162 (without initial connection time)
+=== end ===
+=== 2025-11-16 16:03:41 — workload=pgbench env=docker run=3/7 ===
+$ pgbench -h 192.168.1.60 -U postgres -c 32 -j 8 -T 60 postgres
+pgbench (16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 32
+number of threads: 8
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 37474
+number of failed transactions: 0 (0.000%)
+latency average = 51.090 ms
+initial connection time = 291.247 ms
+tps = 626.340588 (without initial connection time)
+=== end ===
+=== 2025-11-16 16:06:03 — workload=pgbench env=docker run=4/7 ===
+$ pgbench -h 192.168.1.60 -U postgres -c 32 -j 8 -T 60 postgres
+pgbench (16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 32
+number of threads: 8
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 37753
+number of failed transactions: 0 (0.000%)
+latency average = 50.715 ms
+initial connection time = 289.002 ms
+tps = 630.977715 (without initial connection time)
+=== end ===
+=== 2025-11-16 16:08:26 — workload=pgbench env=docker run=5/7 ===
+$ pgbench -h 192.168.1.60 -U postgres -c 32 -j 8 -T 60 postgres
+pgbench (16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 32
+number of threads: 8
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 35372
+number of failed transactions: 0 (0.000%)
+latency average = 54.376 ms
+initial connection time = 314.958 ms
+tps = 588.497950 (without initial connection time)
+=== end ===
+=== 2025-11-16 16:10:49 — workload=pgbench env=docker run=6/7 ===
+$ pgbench -h 192.168.1.60 -U postgres -c 32 -j 8 -T 60 postgres
+pgbench (16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 32
+number of threads: 8
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 36283
+number of failed transactions: 0 (0.000%)
+latency average = 52.762 ms
+initial connection time = 306.393 ms
+tps = 606.496826 (without initial connection time)
+=== end ===
+=== 2025-11-16 16:13:11 — workload=pgbench env=docker run=7/7 ===
+$ pgbench -h 192.168.1.60 -U postgres -c 32 -j 8 -T 60 postgres
+pgbench (16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 32
+number of threads: 8
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 36122
+number of failed transactions: 0 (0.000%)
+latency average = 53.021 ms
+initial connection time = 295.762 ms
+tps = 603.539587 (without initial connection time)
+=== end ===

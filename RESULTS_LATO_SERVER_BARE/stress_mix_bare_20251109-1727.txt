@@ -1,0 +1,11 @@
+=== 2025-11-09 17:27:57 — workload=stress_mix env=bare run=4/7 ===
+$ stress-ng --cpu 4 --vm 2 --vm-bytes 1G --io 2 --timeout 120 
+stress-ng: info:  [2071] setting to a 2 mins, 0 secs run per stressor
+stress-ng: info:  [2071] dispatching hogs: 4 cpu, 2 vm, 2 io
+stress-ng: info:  [2078] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: info:  [2071] skipped: 0
+stress-ng: info:  [2071] passed: 8: cpu (4) vm (2) io (2)
+stress-ng: info:  [2071] failed: 0
+stress-ng: info:  [2071] metrics untrustworthy: 0
+stress-ng: info:  [2071] successful run completed in 2 mins, 0.02 secs
+=== end ===

@@ -1,0 +1,82 @@
+=== 2025-11-02 22:57:40 — workload=http_100kb env=docker run=1/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/100kb
+Running 1m test @ http://192.168.1.149/100kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   153.07ms  194.94ms   1.94s    95.30%
+    Req/Sec   277.96     38.77     0.92k    86.11%
+  66658 requests in 1.05m, 6.38GB read
+Requests/sec:   1056.97
+Transfer/sec:    103.57MB
+=== end ===
+=== 2025-11-02 23:00:18 — workload=http_100kb env=docker run=2/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/100kb
+Running 1m test @ http://192.168.1.149/100kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   154.83ms  193.42ms   1.95s    93.93%
+    Req/Sec   276.78     39.59   797.00     87.78%
+  66243 requests in 1.05m, 6.34GB read
+  Socket errors: connect 0, read 0, write 0, timeout 9
+Requests/sec:   1050.82
+Transfer/sec:    102.99MB
+=== end ===
+=== 2025-11-02 23:02:56 — workload=http_100kb env=docker run=3/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/100kb
+Running 1m test @ http://192.168.1.149/100kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   139.54ms  153.08ms   1.92s    95.09%
+    Req/Sec   277.70     36.33   767.00     84.92%
+  66315 requests in 1.03m, 6.35GB read
+  Socket errors: connect 0, read 0, write 0, timeout 1
+Requests/sec:   1077.63
+Transfer/sec:    105.61MB
+=== end ===
+=== 2025-11-02 23:05:32 — workload=http_100kb env=docker run=4/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/100kb
+Running 1m test @ http://192.168.1.149/100kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   158.14ms  207.46ms   2.00s    94.34%
+    Req/Sec   278.03     39.88     0.95k    83.17%
+  66623 requests in 1.05m, 6.38GB read
+  Socket errors: connect 0, read 0, write 0, timeout 4
+Requests/sec:   1054.57
+Transfer/sec:    103.36MB
+=== end ===
+=== 2025-11-02 23:08:10 — workload=http_100kb env=docker run=5/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/100kb
+Running 1m test @ http://192.168.1.149/100kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   156.23ms  209.18ms   1.99s    94.52%
+    Req/Sec   279.21     39.35   494.00     82.57%
+  66907 requests in 1.05m, 6.40GB read
+  Socket errors: connect 0, read 0, write 0, timeout 21
+Requests/sec:   1057.03
+Transfer/sec:    103.59MB
+=== end ===
+=== 2025-11-02 23:10:48 — workload=http_100kb env=docker run=6/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/100kb
+Running 1m test @ http://192.168.1.149/100kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   140.73ms  164.60ms   1.91s    95.77%
+    Req/Sec   278.49     35.97   646.00     83.51%
+  66657 requests in 1.03m, 6.38GB read
+  Socket errors: connect 0, read 0, write 0, timeout 6
+Requests/sec:   1079.87
+Transfer/sec:    105.83MB
+=== end ===
+=== 2025-11-02 23:13:25 — workload=http_100kb env=docker run=7/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/100kb
+Running 1m test @ http://192.168.1.149/100kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   157.03ms  207.10ms   1.98s    94.51%
+    Req/Sec   279.27     40.56   828.00     80.62%
+  66986 requests in 1.05m, 6.41GB read
+Requests/sec:   1060.08
+Transfer/sec:    103.90MB
+=== end ===

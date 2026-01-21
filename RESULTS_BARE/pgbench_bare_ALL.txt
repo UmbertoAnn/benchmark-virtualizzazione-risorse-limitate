@@ -1,0 +1,112 @@
+=== 2025-11-09 10:48:44 — workload=pgbench env=bare run=1/7 ===
+$ pgbench -h 192.168.1.149 -U postgres -c 32 -j 8 -T 60 postgres
+pgbench (16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 32
+number of threads: 8
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 57683
+number of failed transactions: 0 (0.000%)
+latency average = 33.205 ms
+initial connection time = 237.178 ms
+tps = 963.698201 (without initial connection time)
+=== end ===
+=== 2025-11-09 10:51:05 — workload=pgbench env=bare run=2/7 ===
+$ pgbench -h 192.168.1.149 -U postgres -c 32 -j 8 -T 60 postgres
+pgbench (16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 32
+number of threads: 8
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 57281
+number of failed transactions: 0 (0.000%)
+latency average = 33.460 ms
+initial connection time = 251.174 ms
+tps = 956.370514 (without initial connection time)
+=== end ===
+=== 2025-11-09 10:53:24 — workload=pgbench env=bare run=3/7 ===
+$ pgbench -h 192.168.1.149 -U postgres -c 32 -j 8 -T 60 postgres
+pgbench (16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 32
+number of threads: 8
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 57512
+number of failed transactions: 0 (0.000%)
+latency average = 33.310 ms
+initial connection time = 262.395 ms
+tps = 960.659336 (without initial connection time)
+=== end ===
+=== 2025-11-09 10:55:46 — workload=pgbench env=bare run=4/7 ===
+$ pgbench -h 192.168.1.149 -U postgres -c 32 -j 8 -T 60 postgres
+pgbench (16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 32
+number of threads: 8
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 57535
+number of failed transactions: 0 (0.000%)
+latency average = 33.282 ms
+initial connection time = 259.570 ms
+tps = 961.470991 (without initial connection time)
+=== end ===
+=== 2025-11-09 10:58:05 — workload=pgbench env=bare run=5/7 ===
+$ pgbench -h 192.168.1.149 -U postgres -c 32 -j 8 -T 60 postgres
+pgbench (16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 32
+number of threads: 8
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 57975
+number of failed transactions: 0 (0.000%)
+latency average = 33.049 ms
+initial connection time = 250.690 ms
+tps = 968.245748 (without initial connection time)
+=== end ===
+=== 2025-11-09 11:00:24 — workload=pgbench env=bare run=6/7 ===
+$ pgbench -h 192.168.1.149 -U postgres -c 32 -j 8 -T 60 postgres
+pgbench (16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 32
+number of threads: 8
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 52057
+number of failed transactions: 0 (0.000%)
+latency average = 36.803 ms
+initial connection time = 248.427 ms
+tps = 869.486033 (without initial connection time)
+=== end ===
+=== 2025-11-09 11:02:45 — workload=pgbench env=bare run=7/7 ===
+$ pgbench -h 192.168.1.149 -U postgres -c 32 -j 8 -T 60 postgres
+pgbench (16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 32
+number of threads: 8
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 57735
+number of failed transactions: 0 (0.000%)
+latency average = 33.190 ms
+initial connection time = 248.149 ms
+tps = 964.153947 (without initial connection time)
+=== end ===

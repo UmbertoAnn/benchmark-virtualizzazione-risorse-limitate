@@ -1,0 +1,40 @@
+=== 2025-11-09 17:10:46 — workload=sb_mem env=bare run=4/7 ===
+$ sysbench memory --memory-block-size=1M --memory-total-size=10G run
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Running memory speed test with the following options:
+  block size: 1024KiB
+  total size: 10240MiB
+  operation: write
+  scope: global
+
+Initializing worker threads...
+
+Threads started!
+
+Total operations: 10240 ( 9848.15 per second)
+
+10240.00 MiB transferred (9848.15 MiB/sec)
+
+
+General statistics:
+    total time:                          1.0376s
+    total number of events:              10240
+
+Latency (ms):
+         min:                                    0.10
+         avg:                                    0.10
+         max:                                    0.21
+         95th percentile:                        0.11
+         sum:                                 1034.46
+
+Threads fairness:
+    events (avg/stddev):           10240.0000/0.00
+    execution time (avg/stddev):   1.0345/0.00
+
+=== end ===

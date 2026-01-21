@@ -1,0 +1,39 @@
+=== 2025-11-22 23:22:40 — workload=mongoA env=bare run=2/7 ===
+$ ./ycsb-0.17.0/bin/ycsb.sh run mongodb -s -P ./ycsb-0.17.0/workloads/workloada -p mongodb.url=mongodb://192.168.1.149:27017/ycsb -p threads=4 -p target=1000
+/usr/bin/java  -classpath /mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/conf:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/HdrHistogram-2.1.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/core-0.17.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/htrace-core4-4.1.0-incubating.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/jackson-core-asl-1.9.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/lib/jackson-mapper-asl-1.9.4.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/logback-classic-1.1.2.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/logback-core-1.1.2.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongo-java-driver-3.8.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongodb-async-driver-2.0.1.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/mongodb-binding-0.17.0.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/slf4j-api-1.7.25.jar:/mnt/c/Users/u.annunziata/Desktop/TESI/ycsb-0.17.0/mongodb-binding/lib/snappy-java-1.1.7.1.jar site.ycsb.Client -t -db site.ycsb.db.MongoDbClient -s -P ./ycsb-0.17.0/workloads/workloada -p mongodb.url=mongodb://192.168.1.149:27017/ycsb -p threads=4 -p target=1000
+mongo client connection created with mongodb://192.168.1.149:27017/ycsb
+[OVERALL], RunTime(ms), 2635
+[OVERALL], Throughput(ops/sec), 379.5066413662239
+[TOTAL_GCS_G1_Young_Generation], Count, 1
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 5
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.18975332068311196
+[TOTAL_GCS_G1_Concurrent_GC], Count, 0
+[TOTAL_GC_TIME_G1_Concurrent_GC], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Concurrent_GC], Time(%), 0.0
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 5
+[TOTAL_GC_TIME_%], Time(%), 0.18975332068311196
+[READ], Operations, 485
+[READ], AverageLatency(us), 1526.9628865979382
+[READ], MinLatency(us), 674
+[READ], MaxLatency(us), 85055
+[READ], 95thPercentileLatency(us), 2725
+[READ], 99thPercentileLatency(us), 6303
+[READ], Return=OK, 485
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 4886.0
+[CLEANUP], MinLatency(us), 4884
+[CLEANUP], MaxLatency(us), 4887
+[CLEANUP], 95thPercentileLatency(us), 4887
+[CLEANUP], 99thPercentileLatency(us), 4887
+[UPDATE], Operations, 515
+[UPDATE], AverageLatency(us), 1313.1650485436894
+[UPDATE], MinLatency(us), 689
+[UPDATE], MaxLatency(us), 18655
+[UPDATE], 95thPercentileLatency(us), 2605
+[UPDATE], 99thPercentileLatency(us), 3853
+[UPDATE], Return=OK, 515
+=== end ===

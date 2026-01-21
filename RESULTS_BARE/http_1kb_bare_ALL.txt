@@ -1,0 +1,77 @@
+=== 2025-11-02 18:44:02 — workload=http_1kb env=bare run=1/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/1kb
+Running 1m test @ http://192.168.1.149/1kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    31.77ms  144.75ms   1.33s    96.67%
+    Req/Sec     5.07k   676.66    12.23k    87.77%
+  1215539 requests in 1.04m, 1.46GB read
+Requests/sec:  19400.38
+Transfer/sec:     23.81MB
+=== end ===
+=== 2025-11-02 18:46:38 — workload=http_1kb env=bare run=2/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/1kb
+Running 1m test @ http://192.168.1.149/1kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    31.47ms  145.00ms   1.39s    96.69%
+    Req/Sec     5.14k   607.92    11.41k    86.78%
+  1231748 requests in 1.04m, 1.48GB read
+Requests/sec:  19661.32
+Transfer/sec:     24.13MB
+=== end ===
+=== 2025-11-02 18:49:14 — workload=http_1kb env=bare run=3/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/1kb
+Running 1m test @ http://192.168.1.149/1kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    27.74ms  131.73ms   1.28s    97.09%
+    Req/Sec     5.12k   610.76     6.33k    88.39%
+  1226874 requests in 1.04m, 1.47GB read
+Requests/sec:  19612.97
+Transfer/sec:     24.07MB
+=== end ===
+=== 2025-11-02 18:51:50 — workload=http_1kb env=bare run=4/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/1kb
+Running 1m test @ http://192.168.1.149/1kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    25.78ms  116.24ms   1.16s    97.12%
+    Req/Sec     5.01k   831.90    14.40k    86.52%
+  1200550 requests in 1.04m, 1.44GB read
+Requests/sec:  19263.95
+Transfer/sec:     23.64MB
+=== end ===
+=== 2025-11-02 18:54:25 — workload=http_1kb env=bare run=5/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/1kb
+Running 1m test @ http://192.168.1.149/1kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    19.99ms   89.04ms 946.69ms   97.47%
+    Req/Sec     4.98k   733.13    17.18k    81.74%
+  1193362 requests in 1.03m, 1.43GB read
+Requests/sec:  19267.98
+Transfer/sec:     23.65MB
+=== end ===
+=== 2025-11-02 18:56:59 — workload=http_1kb env=bare run=6/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/1kb
+Running 1m test @ http://192.168.1.149/1kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    20.20ms   90.23ms 959.84ms   97.46%
+    Req/Sec     5.04k   719.82     8.59k    82.65%
+  1206636 requests in 1.03m, 1.45GB read
+Requests/sec:  19499.53
+Transfer/sec:     23.93MB
+=== end ===
+=== 2025-11-02 18:59:34 — workload=http_1kb env=bare run=7/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/1kb
+Running 1m test @ http://192.168.1.149/1kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    19.88ms   88.91ms 954.64ms   97.47%
+    Req/Sec     5.03k   694.33    12.26k    84.62%
+  1205410 requests in 1.03m, 1.44GB read
+Requests/sec:  19463.01
+Transfer/sec:     23.89MB
+=== end ===

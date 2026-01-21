@@ -1,0 +1,133 @@
+# ===== Makefile.client =====
+# Uso:
+#   make -f Makefile.client http_1kb_bare SERVER=192.168.1.50
+#   make -f Makefile.client redis_docker SERVER=192.168.1.50
+# Variabili utili (override da CLI): SERVER, REPS, SLEEP, T, C, D, REDIS_PASS, PG_USER, PG_DB, PG_PASS, PGBENCH_SCALE
+
+SHELL := /bin/bash
+
+# ---- parametri di default (override con: make ... VAR=value) ----
+SERVER        ?= 192.168.1.50
+REPS          ?= 7
+SLEEP         ?= 90
+T             ?= 4       # threads wrk
+C             ?= 128     # connections wrk
+D             ?= 60s     # duration wrk
+REDIS_PASS    ?=
+PG_USER       ?= postgres
+PG_DB         ?= postgres
+PG_PASS       ?= password
+PGBENCH_SCALE ?= 10
+RESULTS_DIR ?= RESULTS
+
+YCSB_DIR     ?= ./ycsb-0.17.0
+YCSB_WORKLOAD ?= workloada
+YCSB_THREADS ?= 4
+YCSB_TARGET  ?= 1000
+
+
+# esporta in ambiente per lo script
+export REPS
+export SLEEP_SECS := $(SLEEP)
+export RESULTS_DIR := $(RESULTS_DIR)
+
+.PHONY: help
+help:
+	@echo "Makefile.client targets (override vars: SERVER, REPS, SLEEP, T, C, D, PG_USER, PG_DB, PG_PASS, REDIS_PASS, PGBENCH_SCALE)"
+	@echo "  http_1kb_bare      http_100kb_bare      http_1kb_docker      http_100kb_docker"
+	@echo "  redis_bare         redis_docker         pgbench_init_bare    pgbench_run_bare"
+	@echo "  pgbench_init_docker pgbench_run_docker  iperf_bare           iperf_vm"
+	@echo ""
+	@echo "Esempio: make -f Makefile.client http_1kb_bare SERVER=192.168.1.50"
+
+# ---------- HTTP (wrk) ----------
+.PHONY: http_1kb_bare
+http_1kb_bare:
+	./run_bench.sh -w http_1kb -e bare wrk --url http://$(SERVER)/1kb --threads $(T) --conns $(C) --dur $(D)
+
+.PHONY: http_100kb_bare
+http_100kb_bare:
+	./run_bench.sh -w http_100kb -e bare wrk --url http://$(SERVER)/100kb --threads $(T) --conns $(C) --dur $(D)
+
+.PHONY: http_1kb_docker
+http_1kb_docker:
+	./run_bench.sh -w http_1kb -e docker wrk --url http://$(SERVER)/1kb --threads $(T) --conns $(C) --dur $(D)
+
+.PHONY: http_100kb_docker
+http_100kb_docker:
+	./run_bench.sh -w http_100kb -e docker wrk --url http://$(SERVER)/100kb --threads $(T) --conns $(C) --dur $(D)
+
+# ---------- Redis (memtier) ----------
+.PHONY: redis_bare
+redis_bare:
+	./run_bench.sh -w redis -e bare memtier --server $(SERVER) --port 6379 --ratio 1:10 --threads 4 --clients 50 --datasize 64 --requests 500000 $(if $(REDIS_PASS),--password $(REDIS_PASS),)
+
+.PHONY: redis_docker
+redis_docker:
+	./run_bench.sh -w redis -e docker memtier --server $(SERVER) --port 6379 --ratio 1:10 --threads 4 --clients 50 --datasize 64 --requests 500000 $(if $(REDIS_PASS),--password $(REDIS_PASS),)
+
+# ---------- PostgreSQL (pgbench) ----------
+# init: crea dataset di test (va eseguito una volta per env)
+.PHONY: pgbench_init_bare
+pgbench_init_bare:
+	PGPASSWORD=$(PG_PASS) ./run_bench.sh -w pgbench_init -e bare pgbench --host $(SERVER) --user $(PG_USER) --db $(PG_DB) --init-scale $(PGBENCH_SCALE) --clients 1 --threads 1 --time 1
+
+.PHONY: pgbench_run_bare
+pgbench_run_bare:
+	PGPASSWORD=$(PG_PASS) ./run_bench.sh -w pgbench -e bare pgbench --host $(SERVER) --user $(PG_USER) --db $(PG_DB) --clients 32 --threads 8 --time 60
+
+.PHONY: pgbench_init_docker
+pgbench_init_docker:
+	PGPASSWORD=$(PG_PASS) ./run_bench.sh -w pgbench_init -e docker pgbench --host $(SERVER) --user $(PG_USER) --db $(PG_DB) --init-scale $(PGBENCH_SCALE) --clients 1 --threads 1 --time 1
+
+.PHONY: pgbench_run_docker
+pgbench_run_docker:
+	PGPASSWORD=$(PG_PASS) ./run_bench.sh -w pgbench -e docker pgbench --host $(SERVER) --user $(PG_USER) --db $(PG_DB) --clients 32 --threads 8 --time 60
+
+# ---------- Rete pura (iperf3) ----------
+.PHONY: iperf_bare
+iperf_bare:
+	./run_bench.sh -w iperf -e bare iperf3 --server $(SERVER) --time 60
+
+# Se hai una VM con un altro IP:
+VM ?=
+.PHONY: iperf_vm
+iperf_vm:
+	./run_bench.sh -w iperf -e vm iperf3 --server $(VM) --time 60
+
+
+.PHONY: mongoA_load_bare
+mongoA_load_bare:
+	REPS=1 SLEEP_SECS=0 \
+	./run_bench.sh -w mongoA_load -e bare -- \
+	$(YCSB_DIR)/bin/ycsb.sh load mongodb -s \
+	  -P $(YCSB_DIR)/workloads/$(YCSB_WORKLOAD) \
+	  -p mongodb.url=mongodb://$(SERVER):27017/ycsb
+
+.PHONY: mongoA_bare
+mongoA_bare:
+	./run_bench.sh -w mongoA -e bare -- \
+	$(YCSB_DIR)/bin/ycsb.sh run mongodb -s \
+	  -P $(YCSB_DIR)/workloads/$(YCSB_WORKLOAD) \
+	  -p mongodb.url=mongodb://$(SERVER):27017/ycsb \
+	  -p threads=$(YCSB_THREADS) \
+	  -p target=$(YCSB_TARGET)
+
+.PHONY: mongoA_load_docker
+mongoA_load_docker:
+	REPS=1 SLEEP_SECS=0 \
+	./run_bench.sh -w mongoA_load -e docker -- \
+	$(YCSB_DIR)/bin/ycsb.sh load mongodb -s \
+	  -P $(YCSB_DIR)/workloads/$(YCSB_WORKLOAD) \
+	  -p mongodb.url=mongodb://$(SERVER):27017/ycsb
+
+.PHONY: mongoA_docker
+mongoA_docker:
+	./run_bench.sh -w mongoA -e docker -- \
+	$(YCSB_DIR)/bin/ycsb.sh run mongodb -s \
+	  -P $(YCSB_DIR)/workloads/$(YCSB_WORKLOAD) \
+	  -p mongodb.url=mongodb://$(SERVER):27017/ycsb \
+	  -p threads=$(YCSB_THREADS) \
+	  -p target=$(YCSB_TARGET)
+
+

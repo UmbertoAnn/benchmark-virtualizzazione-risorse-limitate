@@ -1,0 +1,16 @@
+=== 2025-11-09 10:58:05 — workload=pgbench env=bare run=5/7 ===
+$ pgbench -h 192.168.1.149 -U postgres -c 32 -j 8 -T 60 postgres
+pgbench (16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 32
+number of threads: 8
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 57975
+number of failed transactions: 0 (0.000%)
+latency average = 33.049 ms
+initial connection time = 250.690 ms
+tps = 968.245748 (without initial connection time)
+=== end ===

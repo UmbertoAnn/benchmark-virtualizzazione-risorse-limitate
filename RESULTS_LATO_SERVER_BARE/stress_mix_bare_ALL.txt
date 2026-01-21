@@ -1,0 +1,77 @@
+=== 2025-11-09 17:17:25 — workload=stress_mix env=bare run=1/7 ===
+$ stress-ng --cpu 4 --vm 2 --vm-bytes 1G --io 2 --timeout 120 
+stress-ng: info:  [1985] setting to a 2 mins, 0 secs run per stressor
+stress-ng: info:  [1985] dispatching hogs: 4 cpu, 2 vm, 2 io
+stress-ng: info:  [1992] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: info:  [1985] skipped: 0
+stress-ng: info:  [1985] passed: 8: cpu (4) vm (2) io (2)
+stress-ng: info:  [1985] failed: 0
+stress-ng: info:  [1985] metrics untrustworthy: 0
+stress-ng: info:  [1985] successful run completed in 2 mins, 1.56 secs
+=== end ===
+=== 2025-11-09 17:20:56 — workload=stress_mix env=bare run=2/7 ===
+$ stress-ng --cpu 4 --vm 2 --vm-bytes 1G --io 2 --timeout 120 
+stress-ng: info:  [2015] setting to a 2 mins, 0 secs run per stressor
+stress-ng: info:  [2015] dispatching hogs: 4 cpu, 2 vm, 2 io
+stress-ng: info:  [2022] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: info:  [2015] skipped: 0
+stress-ng: info:  [2015] passed: 8: cpu (4) vm (2) io (2)
+stress-ng: info:  [2015] failed: 0
+stress-ng: info:  [2015] metrics untrustworthy: 0
+stress-ng: info:  [2015] successful run completed in 2 mins, 0.06 secs
+=== end ===
+=== 2025-11-09 17:24:26 — workload=stress_mix env=bare run=3/7 ===
+$ stress-ng --cpu 4 --vm 2 --vm-bytes 1G --io 2 --timeout 120 
+stress-ng: info:  [2043] setting to a 2 mins, 0 secs run per stressor
+stress-ng: info:  [2043] dispatching hogs: 4 cpu, 2 vm, 2 io
+stress-ng: info:  [2050] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: info:  [2043] skipped: 0
+stress-ng: info:  [2043] passed: 8: cpu (4) vm (2) io (2)
+stress-ng: info:  [2043] failed: 0
+stress-ng: info:  [2043] metrics untrustworthy: 0
+stress-ng: info:  [2043] successful run completed in 2 mins, 0.34 secs
+=== end ===
+=== 2025-11-09 17:27:57 — workload=stress_mix env=bare run=4/7 ===
+$ stress-ng --cpu 4 --vm 2 --vm-bytes 1G --io 2 --timeout 120 
+stress-ng: info:  [2071] setting to a 2 mins, 0 secs run per stressor
+stress-ng: info:  [2071] dispatching hogs: 4 cpu, 2 vm, 2 io
+stress-ng: info:  [2078] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: info:  [2071] skipped: 0
+stress-ng: info:  [2071] passed: 8: cpu (4) vm (2) io (2)
+stress-ng: info:  [2071] failed: 0
+stress-ng: info:  [2071] metrics untrustworthy: 0
+stress-ng: info:  [2071] successful run completed in 2 mins, 0.02 secs
+=== end ===
+=== 2025-11-09 17:31:27 — workload=stress_mix env=bare run=5/7 ===
+$ stress-ng --cpu 4 --vm 2 --vm-bytes 1G --io 2 --timeout 120 
+stress-ng: info:  [2098] setting to a 2 mins, 0 secs run per stressor
+stress-ng: info:  [2098] dispatching hogs: 4 cpu, 2 vm, 2 io
+stress-ng: info:  [2105] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: info:  [2098] skipped: 0
+stress-ng: info:  [2098] passed: 8: cpu (4) vm (2) io (2)
+stress-ng: info:  [2098] failed: 0
+stress-ng: info:  [2098] metrics untrustworthy: 0
+stress-ng: info:  [2098] successful run completed in 2 mins, 0.03 secs
+=== end ===
+=== 2025-11-09 17:34:57 — workload=stress_mix env=bare run=6/7 ===
+$ stress-ng --cpu 4 --vm 2 --vm-bytes 1G --io 2 --timeout 120 
+stress-ng: info:  [2127] setting to a 2 mins, 0 secs run per stressor
+stress-ng: info:  [2127] dispatching hogs: 4 cpu, 2 vm, 2 io
+stress-ng: info:  [2134] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: info:  [2127] skipped: 0
+stress-ng: info:  [2127] passed: 8: cpu (4) vm (2) io (2)
+stress-ng: info:  [2127] failed: 0
+stress-ng: info:  [2127] metrics untrustworthy: 0
+stress-ng: info:  [2127] successful run completed in 2 mins, 0.04 secs
+=== end ===
+=== 2025-11-09 17:38:27 — workload=stress_mix env=bare run=7/7 ===
+$ stress-ng --cpu 4 --vm 2 --vm-bytes 1G --io 2 --timeout 120 
+stress-ng: info:  [2154] setting to a 2 mins, 0 secs run per stressor
+stress-ng: info:  [2154] dispatching hogs: 4 cpu, 2 vm, 2 io
+stress-ng: info:  [2161] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: info:  [2154] skipped: 0
+stress-ng: info:  [2154] passed: 8: cpu (4) vm (2) io (2)
+stress-ng: info:  [2154] failed: 0
+stress-ng: info:  [2154] metrics untrustworthy: 0
+stress-ng: info:  [2154] successful run completed in 2 mins, 0.08 secs
+=== end ===

@@ -1,0 +1,77 @@
+=== 2025-11-02 22:15:33 — workload=http_1kb env=docker run=1/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/1kb
+Running 1m test @ http://192.168.1.149/1kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    36.22ms  156.47ms   1.39s    96.55%
+    Req/Sec     4.01k   664.79    13.12k    87.73%
+  961954 requests in 1.05m, 1.15GB read
+Requests/sec:  15312.87
+Transfer/sec:     18.79MB
+=== end ===
+=== 2025-11-02 22:18:10 — workload=http_1kb env=docker run=2/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/1kb
+Running 1m test @ http://192.168.1.149/1kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    35.97ms  156.74ms   1.39s    96.51%
+    Req/Sec     4.08k   519.50     6.21k    86.11%
+  977994 requests in 1.05m, 1.17GB read
+Requests/sec:  15566.89
+Transfer/sec:     19.11MB
+=== end ===
+=== 2025-11-02 22:20:47 — workload=http_1kb env=docker run=3/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/1kb
+Running 1m test @ http://192.168.1.149/1kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    24.39ms  123.06ms   1.47s    98.00%
+    Req/Sec     4.08k   561.62    14.09k    88.61%
+  976432 requests in 1.03m, 1.17GB read
+Requests/sec:  15870.71
+Transfer/sec:     19.48MB
+=== end ===
+=== 2025-11-02 22:23:23 — workload=http_1kb env=docker run=4/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/1kb
+Running 1m test @ http://192.168.1.149/1kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    43.38ms  188.03ms   1.63s    96.14%
+    Req/Sec     4.11k   529.26     6.64k    88.59%
+  983218 requests in 1.05m, 1.18GB read
+Requests/sec:  15566.87
+Transfer/sec:     19.11MB
+=== end ===
+=== 2025-11-02 22:26:01 — workload=http_1kb env=docker run=5/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/1kb
+Running 1m test @ http://192.168.1.149/1kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    42.93ms  186.01ms   1.57s    96.16%
+    Req/Sec     4.09k   562.19    14.99k    87.35%
+  980616 requests in 1.05m, 1.18GB read
+Requests/sec:  15524.68
+Transfer/sec:     19.05MB
+=== end ===
+=== 2025-11-02 22:28:39 — workload=http_1kb env=docker run=6/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/1kb
+Running 1m test @ http://192.168.1.149/1kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    25.63ms  131.74ms   1.52s    97.92%
+    Req/Sec     4.14k   499.99    13.27k    87.80%
+  988601 requests in 1.03m, 1.18GB read
+Requests/sec:  16062.27
+Transfer/sec:     19.71MB
+=== end ===
+=== 2025-11-02 22:31:15 — workload=http_1kb env=docker run=7/7 ===
+$ wrk -t4 -c128 -d60s http://192.168.1.149/1kb
+Running 1m test @ http://192.168.1.149/1kb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    40.75ms  177.30ms   1.53s    96.26%
+    Req/Sec     4.11k   532.20     5.57k    86.48%
+  984837 requests in 1.05m, 1.18GB read
+Requests/sec:  15615.51
+Transfer/sec:     19.17MB
+=== end ===

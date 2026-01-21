@@ -1,0 +1,16 @@
+=== 2025-11-09 13:11:05 — workload=pgbench env=docker run=3/7 ===
+$ pgbench -h 192.168.1.149 -U postgres -c 32 -j 8 -T 60 postgres
+pgbench (16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+transaction type: <builtin: TPC-B (sort of)>
+scaling factor: 10
+query mode: simple
+number of clients: 32
+number of threads: 8
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 53640
+number of failed transactions: 0 (0.000%)
+latency average = 35.718 ms
+initial connection time = 252.920 ms
+tps = 895.912190 (without initial connection time)
+=== end ===

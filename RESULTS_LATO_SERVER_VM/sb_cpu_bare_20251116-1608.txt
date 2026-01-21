@@ -1,0 +1,34 @@
+=== 2025-11-16 16:08:15 — workload=sb_cpu env=bare run=2/7 ===
+$ sysbench cpu --threads=2 --time=60 run
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 2
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:  2682.91
+
+General statistics:
+    total time:                          60.0007s
+    total number of events:              160984
+
+Latency (ms):
+         min:                                    0.72
+         avg:                                    0.74
+         max:                                    5.78
+         95th percentile:                        0.75
+         sum:                               119859.21
+
+Threads fairness:
+    events (avg/stddev):           80492.0000/21.00
+    execution time (avg/stddev):   59.9296/0.00
+
+=== end ===
