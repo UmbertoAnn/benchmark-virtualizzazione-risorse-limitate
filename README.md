@@ -7,7 +7,7 @@ Questo repository contiene gli **artefatti sperimentali e i risultati dei benchm
 L’obiettivo dell’attività sperimentale è analizzare l’overhead introdotto da:
 - virtualizzazione hardware (macchine virtuali),
 - virtualizzazione a livello di sistema operativo (container Docker),
-- e dalla combinazione delle due tecnologie,
+- combinazione delle due tecnologie,
 
 utilizzando sia **carichi di lavoro sintetici** sia **benchmark applicativi**.
 
@@ -66,7 +66,7 @@ Gli esperimenti sono stati condotti nei seguenti ambienti di esecuzione:
 - **Macchina virtuale (KVM)**
 - **Docker su macchina virtuale**
 
-Per i **benchmark sintetici lato server** (CPU, memoria, I/O su disco) sono state considerate esclusivamente le configurazioni **bare metal** e **macchina virtuale**, in quanto i container condividono il kernel del sistema host e non introducono un ambiente di esecuzione kernel-level distinto.
+Per i **benchmark sintetici lato server** (CPU, memoria, I/O su disco) sono state considerate esclusivamente le configurazioni **bare metal** e **macchina virtuale**, in quanto, come spiegato nella tesi, i container condividono il kernel del sistema host e non introducono un ambiente di esecuzione kernel-level distinto.
 
 ---
 
@@ -75,12 +75,12 @@ Per i **benchmark sintetici lato server** (CPU, memoria, I/O su disco) sono stat
 ### Misurazione capacità del sottosistema di rete (effettuato dal client)
 - **iperf3** – caratterizzazione del sottosistema di rete
 
-### Benchmark effettuati lato server
+### Benchmark sintetici (effettuati sul server)
 - **sysbench** – valutazione delle prestazioni CPU e memoria
 - **fio** – analisi delle prestazioni del sottosistema di I/O su storage
 - **stress-ng** – test qualitativi di stabilità del sistema sotto carico misto
 
-### Benchmark effettuati dal client
+### Benchmark applicativi (effettuati dal client)
 - **wrk** – benchmarking HTTP del web server Nginx
 - **pgbench** – valutazione delle prestazioni del database PostgreSQL
 - **memtier_benchmark** – benchmarking del database Redis
@@ -92,7 +92,7 @@ Per i **benchmark sintetici lato server** (CPU, memoria, I/O su disco) sono stat
 
 Ogni esecuzione di benchmark produce un file di output testuale denominato secondo la seguente convenzione:
 
-<workload><ambiente><YYYYMMDD-HHMM>.txt
+<workload>_<ambiente>_<YYYYMMDD-HHMM>.txt
 
 
 Esempio:
@@ -105,9 +105,9 @@ Dove:
 - `<ambiente>` indica l’ambiente di esecuzione,
 - `<YYYYMMDD-HHMM>` rappresenta la data e l’orario di esecuzione.
 
-NOTA: nelle cartelle RESULTS_VM, RESULTS_LATO_SERVER_VM, RESULTS_LATO_SERVER_VM_direct1_nocache_fio64k i file testuali che riportano nel nome l'ambiente "bare" contengono i risultati ottenuti su macchina virtuale.
+NOTA: nelle cartelle che contengono i risultati ottenuti su macchina virtuale (RESULTS_VM, RESULTS_LATO_SERVER_VM, RESULTS_LATO_SERVER_VM_direct1_nocache_fio64k) i file testuali nominati "<workload>_bare_<YYYYMMDD-HHMM>.txt" contengono i risultati ottenuti in maniera "bare" su macchina virtuale.
 
-Ogni benchmark è stato eseguito **sette volte**; i risultati riportati nella tesi rappresentano la **media aritmetica di tutte le esecuzioni**.
+Ogni benchmark è stato eseguito **7 volte** (loop implementato dallo script **run_bench.sh**); i risultati riportati nella tesi considerano la metrica **throughput** e rappresentano la **media aritmetica delle 7 esecuzioni**.
 
 ---
 

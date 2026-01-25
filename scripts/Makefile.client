@@ -36,7 +36,7 @@ help:
 	@echo "Makefile.client targets (override vars: SERVER, REPS, SLEEP, T, C, D, PG_USER, PG_DB, PG_PASS, REDIS_PASS, PGBENCH_SCALE)"
 	@echo "  http_1kb_bare      http_100kb_bare      http_1kb_docker      http_100kb_docker"
 	@echo "  redis_bare         redis_docker         pgbench_init_bare    pgbench_run_bare"
-	@echo "  pgbench_init_docker pgbench_run_docker  iperf_bare           iperf_vm"
+	@echo "  pgbench_init_docker pgbench_run_docker  iperf_bare"
 	@echo ""
 	@echo "Esempio: make -f Makefile.client http_1kb_bare SERVER=192.168.1.50"
 
@@ -88,13 +88,6 @@ pgbench_run_docker:
 .PHONY: iperf_bare
 iperf_bare:
 	./run_bench.sh -w iperf -e bare iperf3 --server $(SERVER) --time 60
-
-# Se hai una VM con un altro IP:
-VM ?=
-.PHONY: iperf_vm
-iperf_vm:
-	./run_bench.sh -w iperf -e vm iperf3 --server $(VM) --time 60
-
 
 .PHONY: mongoA_load_bare
 mongoA_load_bare:
