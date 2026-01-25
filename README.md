@@ -105,7 +105,7 @@ Dove:
 - `<ambiente>` indica l’ambiente di esecuzione,
 - `<YYYYMMDD-HHMM>` rappresenta la data e l’orario di esecuzione.
 
-NOTA: nelle cartelle che contengono i risultati ottenuti su macchina virtuale (RESULTS_VM, RESULTS_LATO_SERVER_VM, RESULTS_LATO_SERVER_VM_direct1_nocache_fio64k) i file testuali nominati "<workload>_bare_<YYYYMMDD-HHMM>.txt" contengono i risultati ottenuti in maniera "bare" su macchina virtuale.
+NOTA: nelle cartelle che contengono i risultati ottenuti su macchina virtuale (RESULTS_VM, RESULTS_LATO_SERVER_VM, RESULTS_LATO_SERVER_VM_direct1_nocache_fio64k) i file testuali nominati `<workload>_bare_<YYYYMMDD-HHMM>.txt` contengono i risultati ottenuti in maniera "bare" su macchina virtuale.
 
 Ogni benchmark è stato eseguito **7 volte** (loop implementato dallo script **run_bench.sh**); i risultati riportati nella tesi considerano la metrica **throughput** e rappresentano la **media aritmetica delle 7 esecuzioni**.
 
