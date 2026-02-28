@@ -2,7 +2,7 @@
 
 ## Panoramica
 
-Questo repository contiene gli **artefatti sperimentali e i risultati dei benchmark** prodotti nell’ambito di una tesi di Laurea Magistrale in Informatica incentrata sulla **Analisi comparativa di prestazioni tra ambienti bare-metal, containerizzati e virtualizzati su risorse hardware limitate**.
+Questo repository contiene gli **artefatti sperimentali e i risultati dei benchmark** prodotti nell’ambito di una tesi di Laurea Magistrale in Informatica incentrata sulla **Analisi comparativa prestazionale tra ambienti bare-metal, containerizzati e virtualizzati su risorse hardware limitate**.
 
 L’obiettivo dell’attività sperimentale è analizzare l’overhead introdotto da:
 - virtualizzazione hardware (macchine virtuali),
@@ -127,7 +127,7 @@ Questo repository è reso disponibile al fine di:
 
 Il presente repository accompagna la tesi di laurea magistrale:
 
-> **Analisi comparativa di prestazioni tra ambienti bare-metal, containerizzati e virtualizzati su risorse hardware limitate**
+> **Analisi comparativa prestazionale tra ambienti bare-metal, containerizzati e virtualizzati su risorse hardware limitate**
 
 Il repository contiene esclusivamente **materiale sperimentale** (script e output dei benchmark).  
 L’analisi dei dati, la loro aggregazione e l’interpretazione dei risultati sono discusse all’interno del documento di tesi.
@@ -145,5 +145,6 @@ L’analisi dei dati, la loro aggregazione e l’interpretazione dei risultati s
 ## Licenza
 
 Il materiale contenuto in questo repository è fornito esclusivamente per scopi accademici e di ricerca.
+
 
 
