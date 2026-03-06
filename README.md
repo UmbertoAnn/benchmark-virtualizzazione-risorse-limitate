@@ -19,26 +19,26 @@ Tutti i test sono stati eseguiti tramite **script di automazione**, al fine di g
 
 Il repository è organizzato come segue:
 
-- ├── RESULTS_BARE/
+- ├── RESULTS_BARE/ --- (contiene i risultati dei benchmark applicativi eseguiti dal client su "bare-metal" e "container su bare-metal")
 - │ ├── http_1kb_bare_YYYYMMDD-HHMM.txt
 - │ ├── redis_bare_YYYYMMDD-HHMM.txt
 - │ ├── http_1kb_docker_YYYYMMDD-HHMM.txt
 - │ ├── redis_docker_YYYYMMDD-HHMM.txt
 - │ └── ...
 - │
-- ├── RESULTS_VM/
+- ├── RESULTS_VM/ --- (contiene i risultati dei benchmark applicativi su "macchina virtuale" e "container su macchina virtuale")
 - │ ├── http_1kb_bare_YYYYMMDD-HHMM.txt
 - │ ├── postgres_bare_YYYYMMDD-HHMM.txt
 - │ ├── http_1kb_docker_YYYYMMDD-HHMM.txt
 - │ ├── postgres_docker_YYYYMMDD-HHMM.txt
 - │ └── ...
 - │
-- ├── RESULTS_LATO_SERVER_BARE/
+- ├── RESULTS_LATO_SERVER_BARE/ --- (contiene i risultati dei benchmark sintetici su bare-metal e su "container su bare-metal")
 - │ ├── sysbench_cpu_bare_.txt
 - │ ├── fio_seq64k_bare_.txt
 - │ └── ...
 - │
-- ├── RESULTS_LATO_SERVER_VM/
+- ├── RESULTS_LATO_SERVER_VM/ --- (contiene i risultati dei benchmark sintetici su macchina virtuale e su "container su macchina virtuale")
 - │ ├── sysbench_cpu_bare_.txt
 - │ ├── fio_seq64k_bare_.txt
 - │ └── ...
@@ -62,9 +62,9 @@ Il repository è organizzato come segue:
 Gli esperimenti sono stati condotti nei seguenti ambienti di esecuzione:
 
 - **Bare metal**
-- **Docker su bare metal**
+- **Container su bare metal**
 - **Macchina virtuale (KVM)**
-- **Docker su macchina virtuale**
+- **Container su macchina virtuale**
 
 Per i **benchmark sintetici lato server** (CPU, memoria, I/O su disco) sono state considerate esclusivamente le configurazioni **bare metal** e **macchina virtuale**, in quanto, come spiegato nella tesi, i container condividono il kernel del sistema host e non introducono un ambiente di esecuzione kernel-level distinto.
 
@@ -105,7 +105,7 @@ Dove:
 - `<ambiente>` indica l’ambiente di esecuzione,
 - `<YYYYMMDD-HHMM>` rappresenta la data e l’orario di esecuzione.
 
-NOTA: nelle cartelle che contengono i risultati ottenuti su macchina virtuale (RESULTS_VM, RESULTS_LATO_SERVER_VM, RESULTS_LATO_SERVER_VM_direct1_nocache_fio64k) i file testuali nominati `<workload>_bare_<YYYYMMDD-HHMM>.txt` contengono i risultati ottenuti in maniera "bare" su macchina virtuale.
+**NOTA:** nelle cartelle che contengono i risultati ottenuti su macchina virtuale (RESULTS_VM, RESULTS_LATO_SERVER_VM, RESULTS_LATO_SERVER_VM_direct1_nocache_fio64k) i file testuali nominati `<workload>_bare_<YYYYMMDD-HHMM>.txt` contengono i risultati ottenuti in maniera "bare" su macchina virtuale.
 
 Ogni benchmark è stato eseguito **7 volte** (loop implementato dallo script **run_bench.sh**); i risultati riportati nella tesi considerano la metrica **throughput** e rappresentano la **media aritmetica delle 7 esecuzioni**.
 
@@ -145,6 +145,7 @@ L’analisi dei dati, la loro aggregazione e l’interpretazione dei risultati s
 ## Licenza
 
 Il materiale contenuto in questo repository è fornito esclusivamente per scopi accademici e di ricerca.
+
 
 
 
