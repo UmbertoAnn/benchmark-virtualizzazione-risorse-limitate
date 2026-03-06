@@ -19,26 +19,26 @@ Tutti i test sono stati eseguiti tramite **script di automazione**, al fine di g
 
 Il repository è organizzato come segue:
 
-- ├── RESULTS_BARE/ --- (contiene i risultati dei benchmark applicativi eseguiti dal client su "bare-metal" e "container su bare-metal")
+- ├── RESULTS_BARE/ --- (contiene i risultati dei benchmark applicativi eseguiti dal client verso "bare-metal" e "container su bare-metal")
 - │ ├── http_1kb_bare_YYYYMMDD-HHMM.txt
 - │ ├── redis_bare_YYYYMMDD-HHMM.txt
 - │ ├── http_1kb_docker_YYYYMMDD-HHMM.txt
 - │ ├── redis_docker_YYYYMMDD-HHMM.txt
 - │ └── ...
 - │
-- ├── RESULTS_VM/ --- (contiene i risultati dei benchmark applicativi su "macchina virtuale" e "container su macchina virtuale")
+- ├── RESULTS_VM/ --- (contiene i risultati dei benchmark applicativi eseguiti dal client verso "macchina virtuale" e "container su macchina virtuale")
 - │ ├── http_1kb_bare_YYYYMMDD-HHMM.txt
 - │ ├── postgres_bare_YYYYMMDD-HHMM.txt
 - │ ├── http_1kb_docker_YYYYMMDD-HHMM.txt
 - │ ├── postgres_docker_YYYYMMDD-HHMM.txt
 - │ └── ...
 - │
-- ├── RESULTS_LATO_SERVER_BARE/ --- (contiene i risultati dei benchmark sintetici su bare-metal e su "container su bare-metal")
+- ├── RESULTS_LATO_SERVER_BARE/ --- (contiene i risultati dei benchmark sintetici eseguiti su server su ambiente "bare-metal" e su "container su bare-metal")
 - │ ├── sysbench_cpu_bare_.txt
 - │ ├── fio_seq64k_bare_.txt
 - │ └── ...
 - │
-- ├── RESULTS_LATO_SERVER_VM/ --- (contiene i risultati dei benchmark sintetici su macchina virtuale e su "container su macchina virtuale")
+- ├── RESULTS_LATO_SERVER_VM/ --- (contiene i risultati dei benchmark sintetici eseguiti su server su macchina virtuale e su "container su macchina virtuale")
 - │ ├── sysbench_cpu_bare_.txt
 - │ ├── fio_seq64k_bare_.txt
 - │ └── ...
@@ -145,6 +145,7 @@ L’analisi dei dati, la loro aggregazione e l’interpretazione dei risultati s
 ## Licenza
 
 Il materiale contenuto in questo repository è fornito esclusivamente per scopi accademici e di ricerca.
+
 
 
 
