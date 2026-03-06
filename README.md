@@ -33,17 +33,17 @@ Il repository è organizzato come segue:
 - │ ├── postgres_docker_YYYYMMDD-HHMM.txt
 - │ └── ...
 - │
-- ├── RESULTS_LATO_SERVER_BARE/ --- (contiene i risultati dei benchmark sintetici eseguiti su server su ambiente "bare-metal" e su "container su bare-metal")
+- ├── RESULTS_LATO_SERVER_BARE/ --- (contiene i risultati dei benchmark sintetici eseguiti su server su ambiente "bare-metal")
 - │ ├── sysbench_cpu_bare_.txt
 - │ ├── fio_seq64k_bare_.txt
 - │ └── ...
 - │
-- ├── RESULTS_LATO_SERVER_VM/ --- (contiene i risultati dei benchmark sintetici eseguiti su server su macchina virtuale e su "container su macchina virtuale")
+- ├── RESULTS_LATO_SERVER_VM/ --- (contiene i risultati dei benchmark sintetici eseguiti su server su ambiente "macchina virtuale")
 - │ ├── sysbench_cpu_bare_.txt
 - │ ├── fio_seq64k_bare_.txt
 - │ └── ...
 - │
-- ├── RESULTS_LATO_SERVER_VM_direct1_nocache_fio64k/ --- (contiene i risultati fio64k eseguiti in modalità Direct I/O, ossia senza uso della cache)
+- ├── RESULTS_LATO_SERVER_VM_direct1_nocache_fio64k/ --- (contiene i risultati fio64k eseguiti su ambiente "macchina virtuale" in modalità Direct I/O, ossia senza uso della cache)
 - │ ├── fio_seq64k_bare_.txt
 - │ └── ...
 - │
@@ -145,6 +145,7 @@ L’analisi dei dati, la loro aggregazione e l’interpretazione dei risultati s
 ## Licenza
 
 Il materiale contenuto in questo repository è fornito esclusivamente per scopi accademici e di ricerca.
+
 
 
 
