@@ -137,7 +137,6 @@ L’analisi dei dati, la loro aggregazione e l’interpretazione dei risultati s
 ## Note
 
 - Gli output dei benchmark sono mantenuti in forma grezza per evitare alterazioni dovute a post-elaborazioni.
-- I grafici e i risultati aggregati sono stati generati separatamente a partire da tali output.
 - Il repository non è concepito come framework di benchmarking, ma come **materiale di supporto a fini accademici**.
 
 ---
@@ -145,6 +144,7 @@ L’analisi dei dati, la loro aggregazione e l’interpretazione dei risultati s
 ## Licenza
 
 Il materiale contenuto in questo repository è fornito esclusivamente per scopi accademici e di ricerca.
+
 
 
 
